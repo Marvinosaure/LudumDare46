@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class TileTestBlinkingBehaviour : MonoBehaviour
+public class BlinkingTile : MonoBehaviour
 {
     public SpriteRenderer sprite;
 

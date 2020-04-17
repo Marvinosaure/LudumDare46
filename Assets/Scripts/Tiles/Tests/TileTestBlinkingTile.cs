@@ -10,9 +10,9 @@ public class TileTestBlinkingTile : Tile
 {
     public override bool StartUp(Vector3Int position, ITilemap tilemap, GameObject go)
     {
-        Debug.Log($"StartUp {position} {tilemap} {go.GetComponent<TileTestBlinkingBehaviour>()}");
+        Debug.Log($"StartUp {position} {tilemap} {go.GetComponent<BlinkingTile>()}");
 
-        go.GetComponent<TileTestBlinkingBehaviour>().SetTile(position, this);
+        go.GetComponent<BlinkingTile>().SetTile(position, this);
 
         return true;
     }

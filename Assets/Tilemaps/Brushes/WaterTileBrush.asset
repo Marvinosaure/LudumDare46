@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
-  m_Name: BlinkingTileBrush
+  m_Name: WaterTileBrush
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_Tile: {fileID: 11400000, guid: da78ba3e8090b824ebf5db7d1da80f94, type: 2}
+  - m_Tile: {fileID: 0}
     m_Matrix:
       e00: 1
       e01: 0
@@ -36,6 +36,6 @@ MonoBehaviour:
   m_Pivot: {x: 0, y: 0, z: 0}
   m_CanChangeZPosition: 0
   m_Anchor: {x: 0.5, y: 0.5, z: 0.5}
-  m_Prefab: {fileID: 6445577734962318284, guid: d6004ad7418a94f349cf7005d118ba58,
+  m_Prefab: {fileID: 7989628786400812514, guid: bba7ed682889a4074b6da1a15b11325f,
     type: 3}
   m_ForceDelete: 0
