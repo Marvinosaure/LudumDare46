@@ -10,6 +10,8 @@ public class Character : MonoBehaviour
     private float _jumpForce = 300;
 
     private Rigidbody2D _rb;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
     private Vector3 _velocity = Vector3.zero;
     private PlayerControls _controls;
     private Vector2 _moveAxis;
@@ -29,12 +31,15 @@ public class Character : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
         MoveCharacter();
         Jump();
+        AnimationsMovements(_rb.velocity.x);
     }
 
     private void HandleMove(InputAction.CallbackContext context)
@@ -50,7 +55,7 @@ public class Character : MonoBehaviour
     private void MoveCharacter()
     {
         Vector3 targetVelocity = new Vector2(_moveAxis.x * Time.fixedDeltaTime * _speed, _rb.velocity.y);
-        _rb.velocity = Vector3.SmoothDamp(_rb.velocity, targetVelocity, ref _velocity, .05f);
+        _rb.velocity = Vector3.SmoothDamp(_rb.velocity, targetVelocity, ref _velocity, .05f);             
     }
 
 
@@ -60,6 +65,20 @@ public class Character : MonoBehaviour
 
         _rb.AddForce(new Vector2(0f, _jumpForce));
         _isJumping = false;
+    }
+
+    private void AnimationsMovements(float speedX)
+    {
+        if (speedX < 0f)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        else
+        {
+            _spriteRenderer.flipX = true;
+        }
+
+        _animator.SetFloat("Speed", Mathf.Abs(speedX));
     }
 
     private void OnEnable()
