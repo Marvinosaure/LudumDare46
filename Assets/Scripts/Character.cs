@@ -13,12 +13,16 @@ public class Character : MonoBehaviour
     private Vector3 _velocity = Vector3.zero;
     private PlayerControls _controls;
     private Vector2 _moveAxis;
+    private bool _isJumping = false;
 
     private void Awake()
     {
         _controls = new PlayerControls();
+
         _controls.Gameplay.Move.performed += HandleMove;
         _controls.Gameplay.Move.canceled += StopMove;
+
+        _controls.Gameplay.Jump.performed += HandleJump;
     }
 
     private void Start()
@@ -29,6 +33,7 @@ public class Character : MonoBehaviour
     private void FixedUpdate()
     {
         MoveCharacter();
+        Jump();
     }
 
     private void HandleMove(InputAction.CallbackContext context)
@@ -41,6 +46,11 @@ public class Character : MonoBehaviour
         _moveAxis = Vector2.zero;
     }
 
+    private void HandleJump(InputAction.CallbackContext context)
+    {
+        _isJumping = true;
+    }
+
     private void MoveCharacter()
     {
         Vector3 targetVelocity = new Vector2(_moveAxis.x * Time.fixedDeltaTime * _speed, _rb.velocity.y);
@@ -50,7 +60,10 @@ public class Character : MonoBehaviour
 
     private void Jump()
     {
+        if (!_isJumping) return;
+
         _rb.AddForce(new Vector2(0f, _jumpForce));
+        _isJumping = false;
     }
 
     private void OnEnable()
