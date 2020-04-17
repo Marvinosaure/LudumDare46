@@ -230,14 +230,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa644e137e238b84db2981f45b55bbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1991968002}
-  _timeOffset: 0
-  _posOffset: {x: 0, y: 0, z: 0}
+  _timeOffset: 0.4
+  _posOffset: {x: 0, y: 0, z: -10}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
