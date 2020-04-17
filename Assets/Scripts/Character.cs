@@ -34,6 +34,8 @@ public class Character : MonoBehaviour
     {
         MoveCharacter();
         Jump();
+
+        Debug.Log("y: " + _rb.velocity.y);
     }
 
     private void HandleMove(InputAction.CallbackContext context)
@@ -60,7 +62,7 @@ public class Character : MonoBehaviour
 
     private void Jump()
     {
-        if (!_isJumping) return;
+        if (!_isJumping || _rb.velocity.y != 0) return;
 
         _rb.AddForce(new Vector2(0f, _jumpForce));
         _isJumping = false;
