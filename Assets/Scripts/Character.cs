@@ -20,9 +20,10 @@ public class Character : MonoBehaviour
         _controls = new PlayerControls();
 
         _controls.Gameplay.Move.performed += HandleMove;
-        _controls.Gameplay.Move.canceled += StopMove;
+        _controls.Gameplay.Move.canceled += context => _moveAxis = Vector2.zero;
 
         _controls.Gameplay.Jump.performed += HandleJump;
+        _controls.Gameplay.Jump.canceled += context => _isJumping = false;
     }
 
     private void Start()
@@ -34,18 +35,11 @@ public class Character : MonoBehaviour
     {
         MoveCharacter();
         Jump();
-
-        Debug.Log("y: " + _rb.velocity.y);
     }
 
     private void HandleMove(InputAction.CallbackContext context)
     {
         _moveAxis = context.ReadValue<Vector2>();
-    }
-
-    private void StopMove(InputAction.CallbackContext context)
-    {
-        _moveAxis = Vector2.zero;
     }
 
     private void HandleJump(InputAction.CallbackContext context)
@@ -56,7 +50,7 @@ public class Character : MonoBehaviour
     private void MoveCharacter()
     {
         Vector3 targetVelocity = new Vector2(_moveAxis.x * Time.fixedDeltaTime * _speed, _rb.velocity.y);
-        _rb.velocity = Vector3.SmoothDamp(_rb.velocity, targetVelocity, ref _velocity, .01f);
+        _rb.velocity = Vector3.SmoothDamp(_rb.velocity, targetVelocity, ref _velocity, .05f);
     }
 
 
