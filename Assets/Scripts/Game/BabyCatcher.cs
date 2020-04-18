@@ -8,6 +8,8 @@ public class BabyCatcher : MonoBehaviour
     [SerializeField] float angleCarry;
     [SerializeField] bool autoReleaseTest;
 
+    public bool isCarrying { get; set; }
+
     private GameObject baby;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,6 +22,8 @@ public class BabyCatcher : MonoBehaviour
             collision.gameObject.transform.localPosition = Vector3.zero;
             collision.gameObject.transform.localRotation = Quaternion.Euler(0, 0, angleCarry);
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+
+            isCarrying = true;
 
             // For testing
             if(autoReleaseTest) StartCoroutine(AutoRelease());
@@ -36,6 +40,7 @@ public class BabyCatcher : MonoBehaviour
         baby.transform.SetParent(null);
         baby.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         baby.GetComponent<Rigidbody2D>().velocity = velocity;
+        isCarrying = false;
         baby = null;
     }
 

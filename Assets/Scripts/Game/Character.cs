@@ -89,11 +89,11 @@ public class Character : MonoBehaviour
     {
         if (speedX < 0f)
         {
-            _spriteRenderer.flipX = false;
+            _spriteRenderer.flipX = true;
         }
         else
         {
-            _spriteRenderer.flipX = true;
+            _spriteRenderer.flipX = false;
         }
 
         _animator.SetFloat("Speed", Mathf.Abs(speedX));
