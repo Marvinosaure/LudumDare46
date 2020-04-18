@@ -5,13 +5,13 @@ public class Spirit : ScriptableObject
 {
     public enum Type
     {
-        type1,
-        type2,
-        type3,
-        type4
+        small,
+        medium,
+        Large
     }
 
     public Type type;
     public float _speed;
     public float _jumpForce;
+    public float _throwForce;
 }
