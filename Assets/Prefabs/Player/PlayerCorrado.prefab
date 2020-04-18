@@ -25,6 +25,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BabyCatcher
       objectReference: {fileID: 0}
+    - target: {fileID: 4944078269830123524, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944078269830123524, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 8153441855398692229, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -91,11 +101,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
       propertyPath: m_Offset.y
-      value: 0
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
       propertyPath: m_Offset.x
@@ -103,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
       propertyPath: m_Size.x
-      value: 0.49
+      value: 1.17
       objectReference: {fileID: 0}
     - target: {fileID: 3894242973228983189, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
@@ -174,7 +184,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6187667358664338887, guid: a3192344f4aa84e0ea8e1b9d007ecbbf,
+      objectReference: {fileID: -1981112127834431051, guid: 033e442b3e7944d098ebc970d4b0419f,
         type: 3}
     m_RemovedComponents:
     - {fileID: 7762192452084276539, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
