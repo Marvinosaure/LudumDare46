@@ -36,8 +36,6 @@ public class TouchGround : MonoBehaviour
 
         if (other.tag=="ground" && !IsGameOver)
         {
-            Debug.Log("DEAD");
-
             IsGameOver = true;
             StartCoroutine(Failure());
             anim.SetBool("dead",true);
@@ -47,7 +45,6 @@ public class TouchGround : MonoBehaviour
 
         if (other.tag=="spirit")
         {
-            Debug.Log("IDLE");
             anim.SetBool("dead",false);
             anim.SetBool("idle",true);
             anim.SetBool("victory",false);
