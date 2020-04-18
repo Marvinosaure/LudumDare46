@@ -211,6 +211,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Validate",
+                    "type": "Button",
+                    "id": "d1893b69-46f9-4f81-a158-5e59179a271f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -387,6 +395,28 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1c92f4a9-799a-4994-b430-065457027c0a",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Validate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4971a445-4b02-4063-9514-388bc3852060",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Validate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -224,6 +224,14 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Validate"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1893b69-46f9-4f81-a158-5e59179a271f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -402,6 +410,28 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1c92f4a9-799a-4994-b430-065457027c0a"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Validate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4971a445-4b02-4063-9514-388bc3852060"",
+                    ""path"": ""<DualShockGamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Validate"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -442,6 +472,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_UI_Down = m_UI.FindAction("Down", throwIfNotFound: true);
         m_UI_Left = m_UI.FindAction("Left", throwIfNotFound: true);
         m_UI_Right = m_UI.FindAction("Right", throwIfNotFound: true);
+        m_UI_Validate = m_UI.FindAction("Validate", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -544,6 +575,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_UI_Down;
     private readonly InputAction m_UI_Left;
     private readonly InputAction m_UI_Right;
+    private readonly InputAction m_UI_Validate;
     public struct UIActions
     {
         private @PlayerControls m_Wrapper;
@@ -552,6 +584,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Down => m_Wrapper.m_UI_Down;
         public InputAction @Left => m_Wrapper.m_UI_Left;
         public InputAction @Right => m_Wrapper.m_UI_Right;
+        public InputAction @Validate => m_Wrapper.m_UI_Validate;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -573,6 +606,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Right.started -= m_Wrapper.m_UIActionsCallbackInterface.OnRight;
                 @Right.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnRight;
                 @Right.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnRight;
+                @Validate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnValidate;
+                @Validate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnValidate;
+                @Validate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnValidate;
             }
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
@@ -589,6 +625,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Right.started += instance.OnRight;
                 @Right.performed += instance.OnRight;
                 @Right.canceled += instance.OnRight;
+                @Validate.started += instance.OnValidate;
+                @Validate.performed += instance.OnValidate;
+                @Validate.canceled += instance.OnValidate;
             }
         }
     }
@@ -623,5 +662,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnDown(InputAction.CallbackContext context);
         void OnLeft(InputAction.CallbackContext context);
         void OnRight(InputAction.CallbackContext context);
+        void OnValidate(InputAction.CallbackContext context);
     }
 }
