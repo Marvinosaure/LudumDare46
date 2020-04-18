@@ -9,8 +9,10 @@ public class TouchGround : MonoBehaviour
     private Animator anim;
     private IEnumerator coroutine;
     private int count=1;
+    private bool isGameOver = false;
 
     public GameObject victory;
+    public GameObject failure;
     public Text level;
     
     // Start is called before the first frame update
@@ -33,13 +35,16 @@ public class TouchGround : MonoBehaviour
         var other = collision.gameObject;
 
         Debug.Log($"BABY TRIGGER {other.tag} {other.name}");
-        if (other.tag=="ground")
+        if (other.tag=="ground" && !isGameOver)
         {
+
+            isGameOver = true;
+            StartCoroutine(Failure());
             anim.SetBool("die",true);
             anim.SetBool("idle",false);
             anim.SetBool("victorydanse",false);
         }
-        
+
         if (other.tag=="spirit")
         {
             anim.SetBool("die",false);
@@ -47,20 +52,26 @@ public class TouchGround : MonoBehaviour
             anim.SetBool("victorydanse",false);
         }
 
-        if (other.tag == "cradle")
+        if (other.tag == "cradle" && !isGameOver)
         {
-            anim.SetBool("die",false);
-            anim.SetBool("idle",false);
-            anim.SetBool("victorydanse",true);
-            StartCoroutine(AutoRelease());
+            isGameOver = true;
+            StartCoroutine(Victory());
             count++;
+            anim.SetBool("die", false);
+            anim.SetBool("idle", false);
+            anim.SetBool("victorydanse", true);
         }
     }
 
-    IEnumerator AutoRelease()
+    IEnumerator Failure()
     {
-        Instantiate(victory);
         yield return new WaitForSeconds(2);
-        Destroy(victory, 2f);
+        Instantiate(failure);
+    }
+
+    IEnumerator Victory()
+    {
+        yield return new WaitForSeconds(2);
+        Instantiate(victory);
     }
 }
