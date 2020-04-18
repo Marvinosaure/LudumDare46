@@ -67,6 +67,7 @@ public class Character : MonoBehaviour
     private void HandleChange(InputAction.CallbackContext context)
     {
         GameManager.instance.ChangeSpirit();
+        //_moveAxis = Vector2.zero;
     }
 
     private void MoveCharacter()
