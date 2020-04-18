@@ -24,7 +24,7 @@
                 {
                     "name": "Change",
                     "type": "Button",
-                    "id": "73ce9348-3d68-48c0-b550-5b0703c9562f",
+                    "id": "f9d4e30e-b0e1-46ef-bdc0-5c4077461db7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -99,6 +99,17 @@
                 },
                 {
                     "name": "",
+                    "id": "b40435b2-7999-418e-a025-99610d5a3191",
+                    "path": "<DualShockGamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "550394da-ea35-421a-a715-19321229bc62",
                     "path": "<Keyboard>/space",
                     "interactions": "Press",
@@ -121,7 +132,18 @@
                 },
                 {
                     "name": "",
-                    "id": "16b479ea-5c82-46e1-952f-ccc3fdae51bb",
+                    "id": "2f06a009-d4a2-4564-900e-3d0bdcd7907e",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3c8f80eb-4c53-4731-8e6b-3d82556f86ed",
                     "path": "<Keyboard>/tab",
                     "interactions": "",
                     "processors": "",
