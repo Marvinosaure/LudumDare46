@@ -6,6 +6,7 @@ TagManager:
   tags:
   - baby
   - ground
+  - cradle
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - babyCatch
   - baby
   - spirit
-  - 
+  - cradle
   - 
   - 
   - 
