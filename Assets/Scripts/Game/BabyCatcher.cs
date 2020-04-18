@@ -17,7 +17,10 @@ public class BabyCatcher : MonoBehaviour
         Debug.Log($"BABY CATCHER ENTER {collision.gameObject} {collision.tag}");
         if(collision.tag == "baby")
         {
+            if (collision.gameObject.GetComponent<TouchGround>().IsGameOver) return;
+
             baby = collision.gameObject;
+
             collision.gameObject.transform.SetParent(positionCarry);
             collision.gameObject.transform.localPosition = Vector3.zero;
             collision.gameObject.transform.localRotation = Quaternion.Euler(0, 0, angleCarry);
@@ -30,11 +33,6 @@ public class BabyCatcher : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Debug.Log($"BABY CATCHER EXIT {collision.gameObject}");
-    }
-
     public void Release(Vector2 velocity)
     {
         baby.transform.SetParent(null);
@@ -42,6 +40,11 @@ public class BabyCatcher : MonoBehaviour
         baby.GetComponent<Rigidbody2D>().velocity = velocity;
         isCarrying = false;
         baby = null;
+    }
+
+    void Update()
+    {
+        if(baby != null) baby.transform.localPosition = Vector3.zero;
     }
 
     IEnumerator AutoRelease()
