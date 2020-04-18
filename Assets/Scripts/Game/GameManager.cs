@@ -1,6 +1,7 @@
-﻿using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.DualShock;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     }
 
     private int currentSpirit = 0;
+    private static Color _dualShockColor = Color.yellow;
 
     private void Awake()
     {
@@ -34,6 +36,7 @@ public class GameManager : MonoBehaviour
         }
 
         _cameraFollow = _camera.GetComponent<CameraFollow>();
+        SetDualshockLight(_dualShockColor);
     }
 
     private void Singleton()
@@ -59,5 +62,20 @@ public class GameManager : MonoBehaviour
         }
 
         _cameraFollow.Player = _spirits[currentSpirit].gameObject;
+
+    }
+
+    private void OnDestroy()
+    {
+        SetDualshockLight(new Color());
+    }
+
+    private void SetDualshockLight(Color color)
+    {
+        DualShockGamepad dualshock4 = DualShock4GamepadHID.current;
+        if (dualshock4 != null)
+        {
+            dualshock4.SetLightBarColor(color);
+        }
     }
 }
