@@ -92,6 +92,7 @@ public class Character : MonoBehaviour
         MoveCharacter();
         Jump();
         AnimationsMovements(_rb.velocity.x);
+        _animator.SetBool("InAir", Mathf.Abs(_rb.velocity.y) > 0.1f);
     }
 
     private void HandleMove(InputAction.CallbackContext context)
