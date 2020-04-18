@@ -19,17 +19,20 @@ public class TouchGround : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        level.text = "Level " + count.ToString();
+        // level.text = "Level " + count.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        level.text = "Level " + count.ToString();
+        // level.text = "Level " + count.ToString();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        var other = collision.gameObject;
+
+        Debug.Log($"BABY TRIGGER {other.tag} {other.name}");
         if (other.tag=="ground")
         {
             anim.SetBool("die",true);
@@ -49,19 +52,15 @@ public class TouchGround : MonoBehaviour
             anim.SetBool("die",false);
             anim.SetBool("idle",false);
             anim.SetBool("victorydanse",true);
-            StartCoroutine(coroutine);
-            IEnumerator AutoRelease()
-            {
-                yield return new WaitForSeconds(2);
-                Instantiate(victory);
-                Destroy(victory, 2f);
-
-                
-            }
-
+            StartCoroutine(AutoRelease());
             count++;
-
-
         }
+    }
+
+    IEnumerator AutoRelease()
+    {
+        Instantiate(victory);
+        yield return new WaitForSeconds(2);
+        Destroy(victory, 2f);
     }
 }
