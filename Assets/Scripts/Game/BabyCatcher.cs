@@ -6,6 +6,7 @@ public class BabyCatcher : MonoBehaviour
 {
     [SerializeField] Transform positionCarry;
     [SerializeField] float angleCarry;
+    [SerializeField] bool autoReleaseTest;
 
     private GameObject baby;
 
@@ -21,7 +22,7 @@ public class BabyCatcher : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
 
             // For testing
-            StartCoroutine(AutoRelease());
+            if(autoReleaseTest) StartCoroutine(AutoRelease());
         }
     }
 
