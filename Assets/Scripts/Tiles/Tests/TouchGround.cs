@@ -34,7 +34,6 @@ public class TouchGround : MonoBehaviour
     {
         var other = collision.gameObject;
 
-        Debug.Log($"BABY TRIGGER {other.tag} {other.name}");
         if (other.tag=="ground" && !IsGameOver)
         {
 
@@ -51,6 +50,16 @@ public class TouchGround : MonoBehaviour
             anim.SetBool("idle",true);
             anim.SetBool("victorydanse",false);
         }
+    }
+
+    public void Carry()
+    {
+        anim.SetTrigger("carry");
+    }
+
+    public void Fire()
+    {
+        anim.SetTrigger("fly");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

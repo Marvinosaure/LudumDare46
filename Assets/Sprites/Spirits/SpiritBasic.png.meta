@@ -26,6 +26,42 @@ TextureImporter:
   - first:
       213: 641274650940407702
     second: SpiritBasic_7
+  - first:
+      213: 2304017560650656696
+    second: SpiritBasic_0
+  - first:
+      213: -6818431323165496436
+    second: SpiritBasic_1
+  - first:
+      213: 3235795681645822648
+    second: SpiritBasic_2
+  - first:
+      213: 1677800128922390501
+    second: SpiritBasic_3
+  - first:
+      213: 523379506275321103
+    second: SpiritBasic_4
+  - first:
+      213: 3234919549195397238
+    second: SpiritBasic_5
+  - first:
+      213: -5185497213155897390
+    second: SpiritBasic_6
+  - first:
+      213: -8974118587259336342
+    second: SpiritBasic_7
+  - first:
+      213: 1289233247236162217
+    second: SpiritBasic_8
+  - first:
+      213: 7773473707054840336
+    second: SpiritBasic_9
+  - first:
+      213: -3597848756346372693
+    second: SpiritBasic_10
+  - first:
+      213: 7082103740956635552
+    second: SpiritBasic_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -149,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b1e530240da184e0800000000000000
-      internalID: -1981112127834431051
+      spriteID: 8bb28d2a3c389ff10800000000000000
+      internalID: 2304017560650656696
       vertices: []
       indices: 
       edges: []
@@ -170,8 +206,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0bb44bd788a7aa900800000000000000
-      internalID: 696503819025271728
+      spriteID: c8be25156d01061a0800000000000000
+      internalID: -6818431323165496436
       vertices: []
       indices: 
       edges: []
@@ -191,8 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6231f3dd8ed9ade10800000000000000
-      internalID: 2223262989530632998
+      spriteID: 8b20e3a470bd7ec20800000000000000
+      internalID: 3235795681645822648
       vertices: []
       indices: 
       edges: []
@@ -212,8 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7fa7b7aad7e321d0800000000000000
-      internalID: -3376600369295020164
+      spriteID: 5ef0680f35eb84710800000000000000
+      internalID: 1677800128922390501
       vertices: []
       indices: 
       edges: []
@@ -233,8 +269,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3574634a63c2a3d60800000000000000
-      internalID: 7870651911978239827
+      spriteID: f05824253ea634700800000000000000
+      internalID: 523379506275321103
       vertices: []
       indices: 
       edges: []
@@ -254,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e37df0e23b698c50800000000000000
-      internalID: 6667978589565973475
+      spriteID: 67822cec03eb4ec20800000000000000
+      internalID: 3234919549195397238
       vertices: []
       indices: 
       edges: []
@@ -275,8 +311,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7dcd3215e26d2010800000000000000
-      internalID: 1165696614551899514
+      spriteID: 2df801232c96908b0800000000000000
+      internalID: -5185497213155897390
       vertices: []
       indices: 
       edges: []
@@ -296,8 +332,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69ff3ccb5e346e800800000000000000
-      internalID: 641274650940407702
+      spriteID: a694d2a11b6857380800000000000000
+      internalID: -8974118587259336342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiritBasic_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a28226cec644e110800000000000000
+      internalID: 1289233247236162217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiritBasic_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ab7d3a62de0eb60800000000000000
+      internalID: 7773473707054840336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiritBasic_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: badb46a4e9fd11ec0800000000000000
+      internalID: -3597848756346372693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpiritBasic_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a17f2e64dfa84260800000000000000
+      internalID: 7082103740956635552
       vertices: []
       indices: 
       edges: []

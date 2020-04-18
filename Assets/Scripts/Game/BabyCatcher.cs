@@ -26,6 +26,7 @@ public class BabyCatcher : MonoBehaviour
             collision.gameObject.transform.localRotation = Quaternion.Euler(0, 0, angleCarry);
             collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
 
+            baby.GetComponent<TouchGround>().Carry();
             isCarrying = true;
 
             // For testing
@@ -39,6 +40,7 @@ public class BabyCatcher : MonoBehaviour
         baby.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         baby.GetComponent<Rigidbody2D>().velocity = velocity;
         isCarrying = false;
+        baby.GetComponent<TouchGround>().Fire();
         baby = null;
     }
 
