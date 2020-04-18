@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7762192452084276536}
   - component: {fileID: 7762192452084276534}
   - component: {fileID: 1991968003}
+  - component: {fileID: 3894242973228983189}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -98,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08f2e2ec2919b16498fd2a8345ebcf67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 200
+  _speed: 250
   _jumpForce: 300
 --- !u!114 &7762192452084276536
 MonoBehaviour:
@@ -168,3 +169,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.2151398, y: -0.21448922}
   m_Size: {x: 1.3042284, y: 2.311606}
   m_Direction: 0
+--- !u!95 &3894242973228983189
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762192452084276540}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3db61ab191f948844b565e185f0065c4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
