@@ -3,11 +3,18 @@ using UnityEngine.InputSystem;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField]
     private float _speed = 200f;
+    public float Speed {
+        get { return _speed; }
+        set { _speed = value; }
+    }
 
-    [SerializeField]
-    private float _jumpForce = 300;
+    private float _jumpForce = 300f;
+    public float JumpForce
+    {
+        get { return _jumpForce; }
+        set { _jumpForce = value; }
+    }
 
     private Rigidbody2D _rb;
     private Animator _animator;
@@ -21,11 +28,16 @@ public class Character : MonoBehaviour
     {
         _controls = new PlayerControls();
 
+        _speed = gameObject.GetComponent<SpiritData>().spirit._speed;
+        _jumpForce = gameObject.GetComponent<SpiritData>().spirit._jumpForce;
+
         _controls.Gameplay.Move.performed += HandleMove;
         _controls.Gameplay.Move.canceled += context => _moveAxis = Vector2.zero;
 
         _controls.Gameplay.Jump.performed += HandleJump;
         _controls.Gameplay.Jump.canceled += context => _isJumping = false;
+
+        _controls.Gameplay.Change.performed += HandleChange;
     }
 
     private void Start()
@@ -50,6 +62,11 @@ public class Character : MonoBehaviour
     private void HandleJump(InputAction.CallbackContext context)
     {
         _isJumping = true;
+    }
+
+    private void HandleChange(InputAction.CallbackContext context)
+    {
+        GameManager.instance.ChangeSpirit();
     }
 
     private void MoveCharacter()
