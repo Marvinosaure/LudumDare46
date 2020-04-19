@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TouchGround : MonoBehaviour
 {
@@ -105,11 +106,16 @@ public class TouchGround : MonoBehaviour
         anim.SetTrigger("die");
         yield return new WaitForSeconds(2);
         Instantiate(failure);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Level" + Persistent.CurrentLevel);
     }
 
     IEnumerator Victory()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         Instantiate(victory);
+        yield return new WaitForSeconds(2);
+        Persistent.CurrentLevel += 1;
+        SceneManager.LoadScene("Level" + Persistent.CurrentLevel);
     }
 }

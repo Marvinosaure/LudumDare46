@@ -15,6 +15,7 @@ public class LevelSelectionButton : MonoBehaviour
             level = value;
             GetComponent<Button>().onClick.AddListener(() =>
             {
+                Persistent.CurrentLevel = level;
                 SceneManager.LoadScene("Level" + Level);
             });
             transform.Find("Text").GetComponent<Text>().text = value.ToString();
