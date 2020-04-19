@@ -64,8 +64,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: dcc01bf65a8c844538503e30e87c8723, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: f8d47657b960c4c6b9ce9fe5f4983579, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 8388594860523135302}
   - component: {fileID: 8388594860523135297}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -388,12 +388,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: dcc01bf65a8c844538503e30e87c8723, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: f8d47657b960c4c6b9ce9fe5f4983579, type: 3}
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
-    m_MaxSize: 44
+    m_MaxSize: 220
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -644,7 +644,7 @@ Canvas:
   m_GameObject: {fileID: 8388594861452683684}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -654,7 +654,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &8388594861452683691
 MonoBehaviour:
@@ -772,8 +772,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: dcc01bf65a8c844538503e30e87c8723, type: 3}
-    m_FontSize: 25
+    m_Font: {fileID: 12800000, guid: f8d47657b960c4c6b9ce9fe5f4983579, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -784,4 +784,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: QUIT - PRESS Q
+  m_Text: MENU - PRESS M
