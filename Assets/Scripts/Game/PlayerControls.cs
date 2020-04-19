@@ -51,7 +51,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Fire"",
+                    ""name"": ""Direction"",
                     ""type"": ""Button"",
                     ""id"": ""2140fdc2-463e-4e1b-98ab-10988c1c616f"",
                     ""expectedControlType"": ""Button"",
@@ -221,7 +221,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": ""Tap"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Fire"",
+                    ""action"": ""Direction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -232,7 +232,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": ""Tap"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Fire"",
+                    ""action"": ""Direction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -243,7 +243,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": ""Tap"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Fire"",
+                    ""action"": ""Direction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -254,7 +254,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": ""Tap"",
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
-                    ""action"": ""Fire"",
+                    ""action"": ""Direction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -538,7 +538,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Jump = m_Gameplay.FindAction("Jump", throwIfNotFound: true);
         m_Gameplay_Change = m_Gameplay.FindAction("Change", throwIfNotFound: true);
         m_Gameplay_Aim = m_Gameplay.FindAction("Aim", throwIfNotFound: true);
-        m_Gameplay_Fire = m_Gameplay.FindAction("Fire", throwIfNotFound: true);
+        m_Gameplay_Direction = m_Gameplay.FindAction("Direction", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Up = m_UI.FindAction("Up", throwIfNotFound: true);
@@ -599,7 +599,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Jump;
     private readonly InputAction m_Gameplay_Change;
     private readonly InputAction m_Gameplay_Aim;
-    private readonly InputAction m_Gameplay_Fire;
+    private readonly InputAction m_Gameplay_Direction;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -608,7 +608,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_Gameplay_Jump;
         public InputAction @Change => m_Wrapper.m_Gameplay_Change;
         public InputAction @Aim => m_Wrapper.m_Gameplay_Aim;
-        public InputAction @Fire => m_Wrapper.m_Gameplay_Fire;
+        public InputAction @Direction => m_Wrapper.m_Gameplay_Direction;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -630,9 +630,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Aim.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAim;
                 @Aim.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAim;
                 @Aim.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnAim;
-                @Fire.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFire;
-                @Fire.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFire;
-                @Fire.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnFire;
+                @Direction.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDirection;
+                @Direction.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDirection;
+                @Direction.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDirection;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -649,9 +649,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Aim.started += instance.OnAim;
                 @Aim.performed += instance.OnAim;
                 @Aim.canceled += instance.OnAim;
-                @Fire.started += instance.OnFire;
-                @Fire.performed += instance.OnFire;
-                @Fire.canceled += instance.OnFire;
+                @Direction.started += instance.OnDirection;
+                @Direction.performed += instance.OnDirection;
+                @Direction.canceled += instance.OnDirection;
             }
         }
     }
@@ -745,7 +745,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnChange(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
-        void OnFire(InputAction.CallbackContext context);
+        void OnDirection(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

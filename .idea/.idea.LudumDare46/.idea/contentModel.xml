@@ -122,12 +122,12 @@
             </e>
           </e>
           <e p="Menus" t="Include">
+            <e p="ButtonInteractions.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
           </e>
           <e p="Tiles" t="Include">
             <e p="Tests" t="Include">
               <e p="BlinkingTile.cs" t="Include" />
-              <e p="Level.cs" t="Include" />
               <e p="TileTestBlinkingTile.cs" t="Include" />
               <e p="TouchGround.cs" t="Include" />
               <e p="WaterTile.cs" t="Include" />

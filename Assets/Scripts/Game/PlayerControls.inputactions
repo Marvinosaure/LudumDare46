@@ -38,7 +38,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Fire",
+                    "name": "Direction",
                     "type": "Button",
                     "id": "2140fdc2-463e-4e1b-98ab-10988c1c616f",
                     "expectedControlType": "Button",
@@ -208,7 +208,7 @@
                     "interactions": "Tap",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Fire",
+                    "action": "Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -219,7 +219,7 @@
                     "interactions": "Tap",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Fire",
+                    "action": "Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -230,7 +230,7 @@
                     "interactions": "Tap",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Fire",
+                    "action": "Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -241,7 +241,7 @@
                     "interactions": "Tap",
                     "processors": "",
                     "groups": "Keyboard",
-                    "action": "Fire",
+                    "action": "Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
