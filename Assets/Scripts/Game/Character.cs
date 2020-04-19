@@ -43,7 +43,6 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("AWAKE §§§");
         _controls = new PlayerControls();
 
         _speed = gameObject.GetComponent<SpiritData>().spirit._speed;
@@ -76,7 +75,7 @@ public class Character : MonoBehaviour
         _controls.Gameplay.Aim.performed += HandleAim;
         _controls.Gameplay.Aim.canceled += context => _isAim = false;
 
-        _controls.Gameplay.Fire.performed += HandleFire;
+        _controls.Gameplay.Direction.performed += HandleDirection;
     }
 
     private void Start()
@@ -84,7 +83,7 @@ public class Character : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _babyCatcher = GameObject.Find("BabyCatcher").GetComponent<BabyCatcher>();
+        _babyCatcher = gameObject.transform.Find("BabyCatcher").GetComponent<BabyCatcher>();
     }
 
     private void FixedUpdate()
@@ -97,6 +96,7 @@ public class Character : MonoBehaviour
 
     private void HandleMove(InputAction.CallbackContext context)
     {
+        if (_isAim) return;
         _moveAxis = context.ReadValue<Vector2>();
     }
 
@@ -108,43 +108,36 @@ public class Character : MonoBehaviour
     private void HandleChange(InputAction.CallbackContext context)
     {
         GameManager.instance.ChangeSpirit();
-        //_moveAxis = Vector2.zero;
     }
 
     private void HandleAim(InputAction.CallbackContext context)
     {
         _isAim = context.control.IsPressed();
+        
+        if (!_isAim)
+        {
+            _babyCatcher.Release(_direction);
+        }
+        
     }
 
-    private void HandleFire(InputAction.CallbackContext context)
+    private void HandleDirection(InputAction.CallbackContext context)
     {
-        if(_isAim)
+        if(_isAim && _type == Spirit.Type.medium)
         {
             switch(context.control.name)
             {
                 case "upArrow":
-                    if (_type == Spirit.Type.Large || _type == Spirit.Type.medium)
-                    {
-                        _babyCatcher.Release(_direction);
-                    }                   
+                    _direction = Vector2.up * _throwForce;
                     break;
                 case "leftArrow":
-                    if (_type == Spirit.Type.small || _type == Spirit.Type.medium)
-                    {
-                        _babyCatcher.Release(-_direction);
-                    }
+                    _direction = Vector2.left * _throwForce;
                     break;
                 case "rightArrow":
-                    if (_type == Spirit.Type.small || _type == Spirit.Type.medium)
-                    {
-                        _babyCatcher.Release(_direction);
-                    }
+                    _direction = Vector2.right * _throwForce;
                     break;
                 case "downArrow":
-                    if (_type == Spirit.Type.medium)
-                    {
-                        _babyCatcher.Release(_direction);
-                    }
+                    _direction = Vector2.down * _throwForce;
                     break;
                 default:
                     break;
@@ -161,7 +154,7 @@ public class Character : MonoBehaviour
 
     private void Jump()
     {
-        if (!_isJumping || _rb.velocity.y != 0) return;
+        if (!_isJumping || _rb.velocity.y != 0 || _babyCatcher.isCarrying) return;
 
         _rb.AddForce(new Vector2(0f, _jumpForce));
         _isJumping = false;
