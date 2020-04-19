@@ -10,23 +10,27 @@ public class TouchGround : MonoBehaviour
     private IEnumerator coroutine;
     private int count=1;
     public bool IsGameOver { get; set; } = false;
+    public bool IsCarried { get; set; } = false;
 
     public GameObject victory;
     public GameObject failure;
     public Text level;
-    
-    // Start is called before the first frame update
+    public float maxFallSpeed = 1;
+
+    private Rigidbody2D body;
     
     
     void Start()
     {
         anim = GetComponent<Animator>();
+        body = GetComponent<Rigidbody2D>();
         // level.text = "Level " + count.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!IsCarried && body.velocity.y < -maxFallSpeed) body.velocity = new Vector2(body.velocity.x, -maxFallSpeed);
         // level.text = "Level " + count.ToString();
     }
 
@@ -53,11 +57,13 @@ public class TouchGround : MonoBehaviour
 
     public void Carry()
     {
+        IsCarried = true;
         anim.SetTrigger("carry");
     }
 
     public void Fire()
     {
+        IsCarried = false;
         anim.SetTrigger("fly");
     }
 
@@ -82,6 +88,7 @@ public class TouchGround : MonoBehaviour
 
     IEnumerator Failure()
     {
+        anim.SetTrigger("die");
         yield return new WaitForSeconds(2);
         Instantiate(failure);
     }
