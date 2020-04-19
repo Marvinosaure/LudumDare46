@@ -136,6 +136,7 @@ public class Character : MonoBehaviour
         }
         else
         {
+            _direction = Vector2.up * _throwForce;
             _exitPoints.SetActive(true);
         }
         
@@ -160,6 +161,7 @@ public class Character : MonoBehaviour
                     _direction = Vector2.down * _throwForce;
                     break;
                 default:
+                    _direction = Vector2.up * _throwForce;
                     break;
             }
         }

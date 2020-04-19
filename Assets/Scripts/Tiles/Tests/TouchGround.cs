@@ -53,7 +53,7 @@ public class TouchGround : MonoBehaviour
             float z = 0;
             Vector2 bebe;
             bebe.x = x;
-            bebe.y = y;
+            bebe.y = Mathf.Ceil(y + 0.5f);
 
             Instantiate(Mort, bebe, Quaternion.identity);
             

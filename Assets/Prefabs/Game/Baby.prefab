@@ -122,6 +122,8 @@ MonoBehaviour:
   victory: {fileID: 4833619508629637083, guid: 248b3f90bb27b4a04bdbe986ab278d79, type: 3}
   failure: {fileID: 1623146038461286355, guid: dbb8ff089404d40a59be477fb733f0b9, type: 3}
   level: {fileID: 0}
+  maxFallSpeed: 1
+  Mort: {fileID: 7141877202040870872, guid: d3a0140f9d355e2468648ef7d56589ef, type: 3}
 --- !u!95 &8616316218042181966
 Animator:
   serializedVersion: 3
