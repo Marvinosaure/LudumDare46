@@ -72,10 +72,10 @@ public class GameManager : MonoBehaviour
 
     private void SetDualshockLight(Color color)
     {
-        DualShockGamepad dualshock4 = DualShock4GamepadHID.current;
+        /* DualShockGamepad dualshock4 = DualShock4GamepadHID.current;
         if (dualshock4 != null)
         {
             dualshock4.SetLightBarColor(color);
-        }
+        } */
     }
 }
