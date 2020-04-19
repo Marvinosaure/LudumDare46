@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Character : MonoBehaviour
@@ -41,6 +42,7 @@ public class Character : MonoBehaviour
     private Vector2 _moveAxis;
     private bool _isJumping = false;
     private bool _isAim = false;
+    private BulletTime bulletTime;
 
     private void Awake()
     {
@@ -74,18 +76,19 @@ public class Character : MonoBehaviour
         _controls.Gameplay.Change.performed += HandleChange;
 
         _controls.Gameplay.Aim.performed += HandleAim;
-        _controls.Gameplay.Aim.canceled += context => _isAim = false;
+        _controls.Gameplay.Aim.canceled += context => { _isAim = false; if (bulletTime != null) bulletTime.Active = false; };
 
         _controls.Gameplay.Direction.performed += HandleDirection;
     }
 
-    private void Start()
+    IEnumerator Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _babyCatcher = gameObject.transform.Find("BabyCatcher").GetComponent<BabyCatcher>();
         _exitPoints = gameObject.transform.Find("ExitPoints").gameObject;
+
         if (_type == Spirit.Type.Large)
         {
             _exitPoints.transform.Find("down-arrow").gameObject.SetActive(false);
@@ -98,6 +101,8 @@ public class Character : MonoBehaviour
             _exitPoints.transform.Find("left-arrow").gameObject.SetActive(false);
             _exitPoints.transform.Find("up-arrow").gameObject.SetActive(false);
         }
+        yield return null; // just to make sure everybody is instancied
+        bulletTime = FindObjectOfType<BulletTime>();
     }
 
     private void FixedUpdate()
@@ -128,7 +133,8 @@ public class Character : MonoBehaviour
     private void HandleAim(InputAction.CallbackContext context)
     {
         _isAim = context.control.IsPressed();
-        
+        if (bulletTime != null) bulletTime.Active = true;
+
         if (!_isAim && _babyCatcher.isCarrying)
         {
             _exitPoints.SetActive(false);          

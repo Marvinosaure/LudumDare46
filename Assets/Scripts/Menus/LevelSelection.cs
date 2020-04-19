@@ -17,6 +17,7 @@ public class LevelSelection : MonoBehaviour
             var go = Instantiate(buttonPrefab);
             go.transform.SetParent(levelGrid);
             go.GetComponent<LevelSelectionButton>().Level = level;
+            go.transform.localScale = Vector3.one;
         }
     }
 }
