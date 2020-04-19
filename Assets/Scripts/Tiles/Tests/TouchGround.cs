@@ -45,9 +45,7 @@ public class TouchGround : MonoBehaviour
         {
             IsGameOver = true;
             StartCoroutine(Failure());
-            anim.SetBool("dead",true);
-            anim.SetBool("idle",false);
-            anim.SetBool("victory", false);
+            // anim.SetBool("dead",true);
             float x = transform.position.x;
             float y = transform.position.y;
             float z = 0;
@@ -56,17 +54,13 @@ public class TouchGround : MonoBehaviour
             bebe.y = Mathf.Ceil(y + 0.5f);
 
             Instantiate(Mort, bebe, Quaternion.identity);
-            
-            
-
-
         }
 
         if (other.tag=="spirit")
         {
-            anim.SetBool("dead",false);
-            anim.SetBool("idle",true);
-            anim.SetBool("victory",false);
+            // anim.SetBool("dead",false);
+            // anim.SetBool("idle",true);
+            // anim.SetBool("victory",false);
         }
     }
 
@@ -95,9 +89,9 @@ public class TouchGround : MonoBehaviour
             IsGameOver = true;
             StartCoroutine(Victory());
             count++;
-            anim.SetBool("dead", false);
-            anim.SetBool("idle", false);
-            anim.SetBool("victory", true); 
+            // anim.SetBool("dead", false);
+            // anim.SetBool("idle", false);
+            // anim.SetBool("victory", true); 
         }
     }
 

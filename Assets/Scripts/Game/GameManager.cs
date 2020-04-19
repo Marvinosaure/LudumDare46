@@ -1,4 +1,5 @@
 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.DualShock;
@@ -14,6 +15,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject _spawner;
 
+    [SerializeField]
+    bool _doShuffle;
+
+    [SerializeField]
+    bool _doNerfTwins;
+
     private List<Transform> _spirits = new List<Transform>();
     public List<Transform> Spirits
     {
@@ -28,11 +35,48 @@ public class GameManager : MonoBehaviour
         Singleton();
     }
 
-    private void Start()
+    IEnumerator Start()
     {
+        yield return null; // wait for everybody to be initialised
+
         foreach(Transform child in _spawner.transform)
         {
             _spirits.Add(child);
+        }
+
+        // shuffle
+        if(_doShuffle)
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                int index = Random.Range(1, _spirits.Count - 1);
+
+                var v = _spirits[index];
+                _spirits.RemoveAt(index);
+                _spirits.Add(v);
+            }
+        }
+
+
+        // remove twins
+        if (_doNerfTwins)
+        {
+            int searchIndex = 1;
+            while (searchIndex < _spirits.Count)
+            {
+                Debug.Log($"search index {searchIndex}");
+                var first = _spirits[searchIndex];
+                var toRemoveIndex = _spirits.FindLastIndex(s => Mathf.Abs(s.transform.position.y - first.transform.position.y) < 1);
+                Debug.Log($"toRemoveIndex index {toRemoveIndex}");
+
+                if (toRemoveIndex != -1)
+                {
+                    var nerf = _spirits[toRemoveIndex];
+                    _spirits.RemoveAt(toRemoveIndex);
+                    Destroy(nerf.gameObject);
+                }
+                searchIndex++;
+            }
         }
 
         _cameraFollow = _camera.GetComponent<CameraFollow>();

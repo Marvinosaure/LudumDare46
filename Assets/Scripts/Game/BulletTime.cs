@@ -13,9 +13,8 @@ public class BulletTime : MonoBehaviour
         set
         {
             Time.timeScale = value ? 0.05f : 1;
-            // vignette.intensity.value = value ? 0.5f : 0.2f;
-            if (coroutine != null) StopCoroutine(coroutine);
-            coroutine = StartCoroutine(FxRamp(value));
+            /* if (coroutine != null) StopCoroutine(coroutine);
+            coroutine = StartCoroutine(FxRamp(value)); */
             active = value;
         }
     }
