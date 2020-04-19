@@ -57,6 +57,38 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""51dca368-28f3-49fa-990e-2b44c8b87313"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""81c6b13c-748a-4071-b9b3-dfa0ffa3d548"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Reset"",
+                    ""type"": ""Button"",
+                    ""id"": ""700d3374-0888-4278-ba9a-9691ea5e0668"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Continue"",
+                    ""type"": ""Button"",
+                    ""id"": ""85d0055d-5608-42f1-9680-985b195eba92"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -255,6 +287,50 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard"",
                     ""action"": ""Direction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e4ba287-63a1-4a48-bcdb-253aea8e4b41"",
+                    ""path"": ""<Keyboard>/p"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f5202752-5253-4e50-83a7-dafc5d98e5b4"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e03df40d-702e-4297-ac81-c9960d8ca740"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Reset"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""906fa12c-c112-4419-b191-64d0302d3d77"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Continue"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -539,6 +615,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Gameplay_Change = m_Gameplay.FindAction("Change", throwIfNotFound: true);
         m_Gameplay_Aim = m_Gameplay.FindAction("Aim", throwIfNotFound: true);
         m_Gameplay_Direction = m_Gameplay.FindAction("Direction", throwIfNotFound: true);
+        m_Gameplay_Pause = m_Gameplay.FindAction("Pause", throwIfNotFound: true);
+        m_Gameplay_Quit = m_Gameplay.FindAction("Quit", throwIfNotFound: true);
+        m_Gameplay_Reset = m_Gameplay.FindAction("Reset", throwIfNotFound: true);
+        m_Gameplay_Continue = m_Gameplay.FindAction("Continue", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Up = m_UI.FindAction("Up", throwIfNotFound: true);
@@ -600,6 +680,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Change;
     private readonly InputAction m_Gameplay_Aim;
     private readonly InputAction m_Gameplay_Direction;
+    private readonly InputAction m_Gameplay_Pause;
+    private readonly InputAction m_Gameplay_Quit;
+    private readonly InputAction m_Gameplay_Reset;
+    private readonly InputAction m_Gameplay_Continue;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -609,6 +693,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Change => m_Wrapper.m_Gameplay_Change;
         public InputAction @Aim => m_Wrapper.m_Gameplay_Aim;
         public InputAction @Direction => m_Wrapper.m_Gameplay_Direction;
+        public InputAction @Pause => m_Wrapper.m_Gameplay_Pause;
+        public InputAction @Quit => m_Wrapper.m_Gameplay_Quit;
+        public InputAction @Reset => m_Wrapper.m_Gameplay_Reset;
+        public InputAction @Continue => m_Wrapper.m_Gameplay_Continue;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -633,6 +721,18 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Direction.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDirection;
                 @Direction.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDirection;
                 @Direction.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnDirection;
+                @Pause.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnPause;
+                @Quit.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQuit;
+                @Quit.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQuit;
+                @Quit.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnQuit;
+                @Reset.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReset;
+                @Reset.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReset;
+                @Reset.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnReset;
+                @Continue.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
+                @Continue.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
+                @Continue.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnContinue;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -652,6 +752,18 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Direction.started += instance.OnDirection;
                 @Direction.performed += instance.OnDirection;
                 @Direction.canceled += instance.OnDirection;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+                @Quit.started += instance.OnQuit;
+                @Quit.performed += instance.OnQuit;
+                @Quit.canceled += instance.OnQuit;
+                @Reset.started += instance.OnReset;
+                @Reset.performed += instance.OnReset;
+                @Reset.canceled += instance.OnReset;
+                @Continue.started += instance.OnContinue;
+                @Continue.performed += instance.OnContinue;
+                @Continue.canceled += instance.OnContinue;
             }
         }
     }
@@ -746,6 +858,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnChange(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnDirection(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnQuit(InputAction.CallbackContext context);
+        void OnReset(InputAction.CallbackContext context);
+        void OnContinue(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

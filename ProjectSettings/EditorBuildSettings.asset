@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CorradoTest.unity
     guid: 7e428d42bd6a04b3b8ede9e44704ae1e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: dbbe6b5caf0534474a78fe00fa09593f
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: acfa1b79a3e074145a34e80ca0f6f551
   m_configObjects: {}
