@@ -21,6 +21,7 @@ public class CameraFollow : MonoBehaviour
     private void Start()
     {
         _player.AddComponent<Character>();
+        _player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
     }
 
     void Update()
@@ -31,9 +32,10 @@ public class CameraFollow : MonoBehaviour
     private void InitPlayer(GameObject player)
     {
         Destroy(_player.GetComponent<Character>());
-
+        _player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
 
         _player = player;
+        _player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         _player.AddComponent<Character>();
     }
 }

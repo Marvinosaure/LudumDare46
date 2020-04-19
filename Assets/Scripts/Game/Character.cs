@@ -34,6 +34,7 @@ public class Character : MonoBehaviour
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
     private BabyCatcher _babyCatcher;
+    private GameObject _exitPoints;
     private Spirit.Type _type;
     private Vector3 _velocity = Vector3.zero;
     private PlayerControls _controls;
@@ -84,6 +85,19 @@ public class Character : MonoBehaviour
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _babyCatcher = gameObject.transform.Find("BabyCatcher").GetComponent<BabyCatcher>();
+        _exitPoints = gameObject.transform.Find("ExitPoints").gameObject;
+        if (_type == Spirit.Type.Large)
+        {
+            _exitPoints.transform.Find("down-arrow").gameObject.SetActive(false);
+            _exitPoints.transform.Find("left-arrow").gameObject.SetActive(false);
+            _exitPoints.transform.Find("right-arrow").gameObject.SetActive(false);
+        }
+        else if (_type == Spirit.Type.Large)
+        {
+            _exitPoints.transform.Find("down-arrow").gameObject.SetActive(false);
+            _exitPoints.transform.Find("left-arrow").gameObject.SetActive(false);
+            _exitPoints.transform.Find("up-arrow").gameObject.SetActive(false);
+        }
     }
 
     private void FixedUpdate()
@@ -114,9 +128,14 @@ public class Character : MonoBehaviour
     {
         _isAim = context.control.IsPressed();
         
-        if (!_isAim)
+        if (!_isAim && _babyCatcher.isCarrying)
         {
+            _exitPoints.SetActive(false);          
             _babyCatcher.Release(_direction);
+        }
+        else
+        {
+            _exitPoints.SetActive(true);
         }
         
     }
