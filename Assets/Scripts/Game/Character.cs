@@ -175,6 +175,12 @@ public class Character : MonoBehaviour
 
     private void MoveCharacter()
     {
+        // block horizontal movement when carrying
+        if (_babyCatcher.isCarrying && Mathf.Abs(_rb.velocity.y) > 0.1f)
+        {
+            _rb.velocity = new Vector2(0, _rb.velocity.y) ;
+            return;
+        } 
         Vector3 targetVelocity = new Vector2(_moveAxis.x * Time.fixedDeltaTime * _speed, _rb.velocity.y);
         _rb.velocity = Vector3.SmoothDamp(_rb.velocity, targetVelocity, ref _velocity, .05f);             
     }
