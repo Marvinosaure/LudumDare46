@@ -6,6 +6,6 @@ public class WaterTile : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Character>() != null) collision.gameObject.transform.position = new Vector3(-2, 1, 0);
+        if (collision.gameObject.GetComponent<Character>() != null) Destroy(collision.gameObject); //collision.gameObject.transform.position = new Vector3(-2, 1, 0);
     }
 }
