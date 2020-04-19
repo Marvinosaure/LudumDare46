@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e493af19-528a-43a8-8200-6ddf054a3242" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare46/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare46/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LudumDare46/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LudumDare46/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Baby/Baby controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Baby/Baby controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Baby/Baby-dead.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Baby/Baby-dead.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Baby/Baby.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Baby/Baby.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Baby/BabyFly.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Baby/BabyFly.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CorradoTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CorradoTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tiles/Tests/TouchGround.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tiles/Tests/TouchGround.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/DestroyDeadBaby.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tiles/Tests/TouchGround.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/CorradoTest.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/PlayerControls.cs" root0="FORCE_HIGHLIGHTING" />
@@ -23,6 +32,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/TouchGround.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tiles/Tests/Level.cs" />
+        <option value="$PROJECT_DIR$/Assets/DestroyDeadBaby.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tiles/Tests/TouchGround.cs" />
       </list>
     </option>
@@ -72,7 +82,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587248905850</updated>
-      <workItem from="1587248909630" duration="2571000" />
+      <workItem from="1587248909630" duration="2715000" />
+      <workItem from="1587293584179" duration="2104000" />
+      <workItem from="1587298926456" duration="286000" />
     </task>
     <servers />
   </component>
@@ -86,7 +98,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

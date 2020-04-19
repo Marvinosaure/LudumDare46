@@ -109,6 +109,7 @@
             </e>
           </e>
         </e>
+        <e p="DestroyDeadBaby.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Game" t="Include">
             <e p="BabyCatcher.cs" t="Include" />
