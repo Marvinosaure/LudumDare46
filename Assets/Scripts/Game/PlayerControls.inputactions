@@ -235,6 +235,28 @@
                 },
                 {
                     "name": "",
+                    "id": "e7f2dc43-d16c-4ee3-a1e3-318f6f864533",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "852a91f4-fcc2-4b46-b06b-e1666bb3df9d",
+                    "path": "<DualShockGamepad>/rightTrigger",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "75d7f819-a4a3-4638-a87f-796fc6311c70",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "Press",
@@ -284,6 +306,28 @@
                     "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89fd8841-c826-4ce7-83ef-8ccf9a9761f8",
+                    "path": "<Gamepad>/start",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a383e2f8-5972-4969-81e0-f2a7f1a00b30",
+                    "path": "<DualShockGamepad>/start",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Gamepad",
                     "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
