@@ -121,6 +121,7 @@ public class Character : MonoBehaviour
 
     private void HandleChange(InputAction.CallbackContext context)
     {
+        Debug.Log("handle change");
         GameManager.instance.ChangeSpirit();
     }
 
