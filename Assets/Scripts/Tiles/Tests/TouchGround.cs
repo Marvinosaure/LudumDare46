@@ -16,6 +16,8 @@ public class TouchGround : MonoBehaviour
     public GameObject failure;
     public Text level;
     public float maxFallSpeed = 1;
+    public GameObject Mort;
+
 
     private Rigidbody2D body;
     
@@ -44,7 +46,19 @@ public class TouchGround : MonoBehaviour
             StartCoroutine(Failure());
             anim.SetBool("dead",true);
             anim.SetBool("idle",false);
-            anim.SetBool("victory",false);
+            anim.SetBool("victory", false);
+            float x = transform.position.x;
+            float y = transform.position.y;
+            float z = 0;
+            Vector2 bebe;
+            bebe.x = x;
+            bebe.y = y;
+
+            Instantiate(Mort, bebe, Quaternion.identity);
+            
+            
+
+
         }
 
         if (other.tag=="spirit")
