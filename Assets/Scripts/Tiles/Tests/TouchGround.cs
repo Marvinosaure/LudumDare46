@@ -36,19 +36,18 @@ public class TouchGround : MonoBehaviour
 
         if (other.tag=="ground" && !IsGameOver)
         {
-
             IsGameOver = true;
             StartCoroutine(Failure());
-            anim.SetBool("die",true);
+            anim.SetBool("dead",true);
             anim.SetBool("idle",false);
-            anim.SetBool("victorydanse",false);
+            anim.SetBool("victory",false);
         }
 
         if (other.tag=="spirit")
         {
-            anim.SetBool("die",false);
+            anim.SetBool("dead",false);
             anim.SetBool("idle",true);
-            anim.SetBool("victorydanse",false);
+            anim.SetBool("victory",false);
         }
     }
 
@@ -74,10 +73,10 @@ public class TouchGround : MonoBehaviour
             // gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             IsGameOver = true;
             StartCoroutine(Victory());
-            /* count++;
-            anim.SetBool("die", false);
+            count++;
+            anim.SetBool("dead", false);
             anim.SetBool("idle", false);
-            anim.SetBool("victorydanse", true); */
+            anim.SetBool("victory", true); 
         }
     }
 
