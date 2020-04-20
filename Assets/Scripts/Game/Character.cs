@@ -71,12 +71,22 @@ public class Character : MonoBehaviour
                 _direction = Vector2.up * _throwForce;
                 SetArrow();
                 break;
+
+            case Spirit.Type.medium:
+                _direction = Vector2.up * _throwForce;
+                SetArrow();
+                break;
             default:
                 break;
         }
 
         _controls.Gameplay.Move.performed += HandleMove;
-        _controls.Gameplay.Move.canceled += context => _moveAxis = Vector2.zero;
+        _controls.Gameplay.Move.canceled += context =>
+        {
+            _moveAxis = Vector2.zero;
+            _direction = Vector2.up * _throwForce;
+            SetArrow();
+        };
 
         _controls.Gameplay.Jump.performed += HandleJump;
         _controls.Gameplay.Jump.canceled += context => { _isJumping = false; _isAim = false; };
