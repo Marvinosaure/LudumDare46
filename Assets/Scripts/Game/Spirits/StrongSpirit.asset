@@ -15,4 +15,4 @@ MonoBehaviour:
   type: 2
   _speed: 100
   _jumpForce: 250
-  _throwForce: 12
+  _throwForce: 15

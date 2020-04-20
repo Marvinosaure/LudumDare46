@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   _speed: 400
-  _jumpForce: 500
+  _jumpForce: 450
   _throwForce: 5
