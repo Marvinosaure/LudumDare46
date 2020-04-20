@@ -108,7 +108,6 @@ public class Character : MonoBehaviour
     private void Update()
     {        
         _animator.SetBool("InAir", !_spiritData._isGrounded);
-        Debug.Log(_spiritData._isGrounded);
     }
 
     private void FixedUpdate()
