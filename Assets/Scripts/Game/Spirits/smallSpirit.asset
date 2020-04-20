@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: smallSpirit
   m_EditorClassIdentifier: 
   type: 0
-  _speed: 150
-  _jumpForce: 300
-  _throwForce: 7
+  _speed: 400
+  _jumpForce: 500
+  _throwForce: 5
