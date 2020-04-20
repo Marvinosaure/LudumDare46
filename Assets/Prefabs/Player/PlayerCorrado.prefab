@@ -196,6 +196,36 @@ Transform:
   m_Father: {fileID: 2057131260701201533}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5530512363205216449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6149769182642072406}
+  m_Layer: 10
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6149769182642072406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530512363205216449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.557, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2057131260701201533}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5710082325124198105
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,6 +346,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spirit: {fileID: 11400000, guid: 295dbde0d01584849b76018736c1e4f7, type: 2}
+  _groundCheckRadius: 0.6
+  _collisionLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  _groundCheck: {fileID: 6149769182642072406}
+  _isGrounded: 0
 --- !u!1 &8738678620767160746
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +444,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BabyCatcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731666334382290918, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880487202445411049, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4944078269830123524, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
         type: 3}

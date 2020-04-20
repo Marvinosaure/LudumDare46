@@ -162,6 +162,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3861989902294897747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1624307344902960880}
+  m_Layer: 10
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1624307344902960880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3861989902294897747}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.199, y: -0.579, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2057131260701201533}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4408239895489910605
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,19 +307,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-4887475021457009679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057131260701201531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa27c53142739e4c97feacd30784f94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spirit: {fileID: 11400000, guid: 21418566b9e40b040a5fb6809003a813, type: 2}
 --- !u!61 &7017655950067872092
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -316,6 +333,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7511377, y: 1.5022755}
   m_EdgeRadius: 0
+--- !u!114 &-4887475021457009679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057131260701201531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa27c53142739e4c97feacd30784f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spirit: {fileID: 11400000, guid: 21418566b9e40b040a5fb6809003a813, type: 2}
+  _groundCheckRadius: 0.6
+  _collisionLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  _groundCheck: {fileID: 1624307344902960880}
+  _isGrounded: 0
 --- !u!1 &8738678620767160746
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,12 +448,12 @@ PrefabInstance:
     - target: {fileID: 1731666334382290918, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4880487202445411049, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4944078269830123524, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
         type: 3}

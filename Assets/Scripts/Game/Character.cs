@@ -43,15 +43,17 @@ public class Character : MonoBehaviour
     private bool _isJumping = false;
     private bool _isAim = false;
     private BulletTime bulletTime;
+    private SpiritData _spiritData;
 
     private void Awake()
     {
         _controls = new PlayerControls();
 
-        _speed = gameObject.GetComponent<SpiritData>().spirit._speed;
-        _jumpForce = gameObject.GetComponent<SpiritData>().spirit._jumpForce;
-        _throwForce = gameObject.GetComponent<SpiritData>().spirit._throwForce;
-        _type = gameObject.GetComponent<SpiritData>().spirit.type;
+        _spiritData = gameObject.GetComponent<SpiritData>();
+        _speed = _spiritData.spirit._speed;
+        _jumpForce = _spiritData.spirit._jumpForce;
+        _throwForce = _spiritData.spirit._throwForce;
+        _type = _spiritData.spirit.type;
 
 
         switch (_type)
@@ -103,13 +105,17 @@ public class Character : MonoBehaviour
         bulletTime = FindObjectOfType<BulletTime>();
     }
 
+    private void Update()
+    {        
+        _animator.SetBool("InAir", !_spiritData._isGrounded);
+        Debug.Log(_spiritData._isGrounded);
+    }
 
     private void FixedUpdate()
     {
         MoveCharacter();
         Jump();
         AnimationsMovements(_rb.velocity.x);
-        _animator.SetBool("InAir", Mathf.Abs(_rb.velocity.y) >= 1f);
     }
 
     private void HandleMove(InputAction.CallbackContext context)
@@ -165,7 +171,7 @@ public class Character : MonoBehaviour
 
     private void Jump()
     {
-        if (!_isJumping || _rb.velocity.y != 0 || _babyCatcher.isCarrying) return;
+        if (!_isJumping || !_spiritData._isGrounded || _babyCatcher.isCarrying) return;
 
         _animator.SetTrigger("Jump");
 
