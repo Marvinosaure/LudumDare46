@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa27c53142739e4c97feacd30784f94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spirit: {fileID: 11400000, guid: 295dbde0d01584849b76018736c1e4f7, type: 2}
+  spirit: {fileID: 11400000, guid: 21418566b9e40b040a5fb6809003a813, type: 2}
 --- !u!1 &3223842128346267381
 GameObject:
   m_ObjectHideFlags: 0
@@ -23,7 +23,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2366384076476581578}
   - component: {fileID: 8063553590062061403}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: left-arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5834919162106293593}
   - component: {fileID: 7127751697557656297}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: right-arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5649730563055152924}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ExitPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1134083068746632514}
   - component: {fileID: 7467624734127622762}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: down-arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2685374070786716093}
   - component: {fileID: 1434728733049456672}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: up-arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,6 +382,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BabyCatcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1731666334382290918, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880487202445411049, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4944078269830123524, guid: 30b2108025dfc4583ab07e2c7ff0f1d2,
         type: 3}
@@ -488,15 +498,29 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 1.17
       objectReference: {fileID: 0}
+    - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f2a7fd30937a02f4d9d632fe27fce7a7, type: 2}
     - target: {fileID: 3894242973228983189, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 5945a6e1e41ab479d8278aef045c2953, type: 2}
+      objectReference: {fileID: 9100000, guid: 0e8b6ccdde8cfa44c8d4cc9105765ae8, type: 2}
     - target: {fileID: 7762192452084276534, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_BodyType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762192452084276534, guid: 0f3a2761b80d73144894a98078de6c61,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f2a7fd30937a02f4d9d632fe27fce7a7, type: 2}
+    - target: {fileID: 7762192452084276536, guid: 0f3a2761b80d73144894a98078de6c61,
+        type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Keyboard
       objectReference: {fileID: 0}
     - target: {fileID: 7762192452084276538, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
@@ -556,18 +580,28 @@ PrefabInstance:
     - target: {fileID: 7762192452084276540, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_Name
-      value: PlayerMarvinVariant
+      value: PlayerStrong
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762192452084276540, guid: 0f3a2761b80d73144894a98078de6c61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762192452084276540, guid: 0f3a2761b80d73144894a98078de6c61,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7762192452084276541, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1981112127834431051, guid: 033e442b3e7944d098ebc970d4b0419f,
+      objectReference: {fileID: 840532800270022221, guid: 87d75aa7ce6d2794e948179bb7050100,
         type: 3}
     - target: {fileID: 7762192452084276541, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7762192452084276539, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}

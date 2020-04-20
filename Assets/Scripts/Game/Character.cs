@@ -105,12 +105,13 @@ public class Character : MonoBehaviour
         bulletTime = FindObjectOfType<BulletTime>();
     }
 
+
     private void FixedUpdate()
     {
         MoveCharacter();
         Jump();
         AnimationsMovements(_rb.velocity.x);
-        _animator.SetBool("InAir", Mathf.Abs(_rb.velocity.y) > 0.1f);
+        _animator.SetBool("InAir", Mathf.Abs(_rb.velocity.y) >= 1f);
     }
 
     private void HandleMove(InputAction.CallbackContext context)
@@ -183,6 +184,8 @@ public class Character : MonoBehaviour
     private void Jump()
     {
         if (!_isJumping || _rb.velocity.y != 0 || _babyCatcher.isCarrying) return;
+
+        _animator.SetTrigger("Jump");
 
         _rb.AddForce(new Vector2(0f, _jumpForce));
         _isJumping = false;

@@ -1,0 +1,1022 @@
+fileFormatVersion: 2
+guid: 87d75aa7ce6d2794e948179bb7050100
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 840532800270022221
+    second: Lezard_fort_marche_tout_0
+  - first:
+      213: -481871477121134765
+    second: Lezard_fort_marche_tout_1
+  - first:
+      213: 6418090010944943407
+    second: Lezard_fort_marche_tout_2
+  - first:
+      213: 8253575846386163794
+    second: Lezard_fort_marche_tout_3
+  - first:
+      213: -1566653951997952246
+    second: Lezard_fort_marche_tout_4
+  - first:
+      213: 5680152879831679164
+    second: Lezard_fort_marche_tout_5
+  - first:
+      213: 7488033873575376672
+    second: Lezard_fort_marche_tout_6
+  - first:
+      213: 8518614995953804860
+    second: Lezard_fort_marche_tout_7
+  - first:
+      213: -7734971976992824848
+    second: Lezard_fort_marche_tout_8
+  - first:
+      213: 1397509931328881885
+    second: Lezard_fort_marche_tout_9
+  - first:
+      213: 3535571795640454496
+    second: Lezard_fort_marche_tout_10
+  - first:
+      213: 8920966122151720748
+    second: Lezard_fort_marche_tout_11
+  - first:
+      213: -6755308322833662295
+    second: Lezard_fort_marche_tout_12
+  - first:
+      213: 2864191741383586667
+    second: Lezard_fort_marche_tout_13
+  - first:
+      213: -3367135121381972436
+    second: Lezard_fort_marche_tout_14
+  - first:
+      213: 97388782031552066
+    second: Lezard_fort_marche_tout_15
+  - first:
+      213: 2893859565721981279
+    second: Lezard_fort_marche_tout_16
+  - first:
+      213: -5242443427150778813
+    second: Lezard_fort_marche_tout_17
+  - first:
+      213: 3203801383012856771
+    second: Lezard_fort_marche_tout_18
+  - first:
+      213: -7173073995442332996
+    second: Lezard_fort_marche_tout_19
+  - first:
+      213: -8462894434702485994
+    second: Lezard_fort_marche_tout_20
+  - first:
+      213: 3121248516574622585
+    second: Lezard_fort_marche_tout_21
+  - first:
+      213: -2321099407873070408
+    second: Lezard_fort_marche_tout_22
+  - first:
+      213: 6573755859331520046
+    second: Lezard_fort_marche_tout_23
+  - first:
+      213: -5469573124483466474
+    second: Lezard_fort_marche_tout_24
+  - first:
+      213: -1681095783808825465
+    second: Lezard_fort_marche_tout_25
+  - first:
+      213: 8325506792848967977
+    second: Lezard_fort_marche_tout_26
+  - first:
+      213: 2916923514439457189
+    second: Lezard_fort_marche_tout_27
+  - first:
+      213: 8341063500858517039
+    second: Lezard_fort_marche_tout_28
+  - first:
+      213: -7993243326574437973
+    second: Lezard_fort_marche_tout_29
+  - first:
+      213: -6953971364261644114
+    second: Lezard_fort_marche_tout_30
+  - first:
+      213: 2790949854535244158
+    second: Lezard_fort_marche_tout_31
+  - first:
+      213: -2345846983474430934
+    second: Lezard_fort_marche_tout_32
+  - first:
+      213: -6819538398246070004
+    second: Lezard_fort_marche_tout_33
+  - first:
+      213: -7548510137690665514
+    second: Lezard_fort_marche_tout_0
+  - first:
+      213: 8417570802211756545
+    second: Lezard_fort_marche_tout_1
+  - first:
+      213: -7459141973344614680
+    second: Lezard_fort_marche_tout_2
+  - first:
+      213: -4926088593013395560
+    second: Lezard_fort_marche_tout_3
+  - first:
+      213: 9048405487891198466
+    second: Lezard_fort_marche_tout_4
+  - first:
+      213: -3076199272108997115
+    second: Lezard_fort_marche_tout_5
+  - first:
+      213: 3431353032578679143
+    second: Lezard_fort_marche_tout_6
+  - first:
+      213: 2489487540982810065
+    second: Lezard_fort_marche_tout_7
+  - first:
+      213: -5095332107098462797
+    second: Lezard_fort_marche_tout_8
+  - first:
+      213: -6904419608542279039
+    second: Lezard_fort_marche_tout_9
+  - first:
+      213: -4875767452007197625
+    second: Lezard_fort_marche_tout_10
+  - first:
+      213: -4424533247625913132
+    second: Lezard_fort_marche_tout_11
+  - first:
+      213: 805534979979824144
+    second: Lezard_fort_marche_tout_12
+  - first:
+      213: 2520848928810210193
+    second: Lezard_fort_marche_tout_13
+  - first:
+      213: 4871614481756142125
+    second: Lezard_fort_marche_tout_14
+  - first:
+      213: 5322730538201613732
+    second: Lezard_fort_marche_tout_15
+  - first:
+      213: -2916798731046053140
+    second: Lezard_fort_marche_tout_16
+  - first:
+      213: 7358955413966665297
+    second: Lezard_fort_marche_tout_17
+  - first:
+      213: 2898727417702630607
+    second: Lezard_fort_marche_tout_18
+  - first:
+      213: -7467838203935715419
+    second: Lezard_fort_marche_tout_19
+  - first:
+      213: -2777206992190730328
+    second: Lezard_fort_marche_tout_20
+  - first:
+      213: 4489833115396408168
+    second: Lezard_fort_marche_tout_21
+  - first:
+      213: -4744408184688558057
+    second: Lezard_fort_marche_tout_22
+  - first:
+      213: -4402737256029226231
+    second: Lezard_fort_marche_tout_23
+  - first:
+      213: -6199088553811016823
+    second: Lezard_fort_marche_tout_24
+  - first:
+      213: 553337652397692219
+    second: Lezard_fort_marche_tout_25
+  - first:
+      213: 5048145370918737577
+    second: Lezard_fort_marche_tout_26
+  - first:
+      213: 7162257691283833315
+    second: Lezard_fort_marche_tout_27
+  - first:
+      213: 3177914330504710530
+    second: Lezard_fort_marche_tout_28
+  - first:
+      213: -9075610056864608604
+    second: Lezard_fort_marche_tout_29
+  - first:
+      213: 7346166824259381350
+    second: Lezard_fort_marche_tout_30
+  - first:
+      213: 6989910208162037486
+    second: Lezard_fort_marche_tout_31
+  - first:
+      213: -3676811131581514942
+    second: Lezard_fort_marche_tout_32
+  - first:
+      213: 5936919142482330700
+    second: Lezard_fort_marche_tout_33
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd4383060e4e3790800000000000000
+      internalID: -7548510137690665514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a1881eb0831d470800000000000000
+      internalID: 8417570802211756545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6869d35edcb7890800000000000000
+      internalID: -7459141973344614680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f2551368403abb0800000000000000
+      internalID: -4926088593013395560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2023379c9d4629d70800000000000000
+      internalID: 9048405487891198466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506c0a77f052f45d0800000000000000
+      internalID: -3076199272108997115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761cfcd276d9e9f20800000000000000
+      internalID: 3431353032578679143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d58a098abf6c8220800000000000000
+      internalID: 2489487540982810065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5e0cfd17eb949b0800000000000000
+      internalID: -5095332107098462797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a889c72f29e20a0800000000000000
+      internalID: -6904419608542279039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74413b7d55bc55cb0800000000000000
+      internalID: -4875767452007197625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc1a561476e892c0800000000000000
+      internalID: -4424533247625913132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c49dfdbc5dd2b00800000000000000
+      internalID: 805534979979824144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1931826aebadbf220800000000000000
+      internalID: 2520848928810210193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a39bb6f837b9340800000000000000
+      internalID: 4871614481756142125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a581a439332ed940800000000000000
+      internalID: 5322730538201613732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea90ba02037587d0800000000000000
+      internalID: -2916798731046053140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156bb67a5f2402660800000000000000
+      internalID: 7358955413966665297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_18
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4c9d07a395a3820800000000000000
+      internalID: 2898727417702630607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af025648b8ec5890800000000000000
+      internalID: -7467838203935715419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_20
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af8db274f06579d0800000000000000
+      internalID: -2777206992190730328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8630df72e671f4e30800000000000000
+      internalID: 4489833115396408168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_22
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710ce2a94e9782eb0800000000000000
+      internalID: -4744408184688558057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_23
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90bfff6dac556e2c0800000000000000
+      internalID: -4402737256029226231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98387e2fdc968f9a0800000000000000
+      internalID: -6199088553811016823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_25
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b355304c9a9dda700800000000000000
+      internalID: 553337652397692219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6d428f77d9e0640800000000000000
+      internalID: 5048145370918737577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_27
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e148c64c63756360800000000000000
+      internalID: 7162257691283833315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_28
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2894b5c0f383a1c20800000000000000
+      internalID: 3177914330504710530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae4f98ecb4fc0280800000000000000
+      internalID: -9075610056864608604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_30
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6686db41ec3d2f560800000000000000
+      internalID: 7346166824259381350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_31
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeeff59dc46210160800000000000000
+      internalID: 6989910208162037486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_32
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24bb1e3a1c759fcc0800000000000000
+      internalID: -3676811131581514942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lezard_fort_marche_tout_33
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4440e3418c246250800000000000000
+      internalID: 5936919142482330700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

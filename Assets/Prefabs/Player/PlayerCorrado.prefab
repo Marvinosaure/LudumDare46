@@ -492,7 +492,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 5945a6e1e41ab479d8278aef045c2953, type: 2}
+      objectReference: {fileID: 9100000, guid: 65bb0a3f05d75db498014137e3e88f40, type: 2}
     - target: {fileID: 7762192452084276534, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_BodyType
@@ -556,13 +556,18 @@ PrefabInstance:
     - target: {fileID: 7762192452084276540, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_Name
-      value: PlayerMarvinVariant
+      value: PlayerCorrado
+      objectReference: {fileID: 0}
+    - target: {fileID: 7762192452084276540, guid: 0f3a2761b80d73144894a98078de6c61,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7762192452084276541, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1981112127834431051, guid: 033e442b3e7944d098ebc970d4b0419f,
+      objectReference: {fileID: -1623475946016831033, guid: c7d8353dc55fb714db6b0415b44a0874,
         type: 3}
     - target: {fileID: 7762192452084276541, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
