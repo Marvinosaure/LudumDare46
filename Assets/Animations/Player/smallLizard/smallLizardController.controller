@@ -449,7 +449,7 @@ AnimatorStateTransition:
     m_ConditionEvent: InAir
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: InAir
+    m_ConditionEvent: Baby
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6530594785390235366}
