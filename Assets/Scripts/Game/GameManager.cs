@@ -41,11 +41,13 @@ public class GameManager : MonoBehaviour
 
         foreach(Transform child in _spawner.transform)
         {
+            child.Find("Marker").gameObject.SetActive(false);
             _spirits.Add(child);
         }
+        _spirits[0].transform.Find("Marker").gameObject.SetActive(true);
 
         // shuffle
-        if(_doShuffle)
+        if (_doShuffle)
         {
             for (int i = 0; i < 100; i++)
             {
@@ -98,13 +100,14 @@ public class GameManager : MonoBehaviour
 
     public void ChangeSpirit()
     {
+        _spirits[currentSpirit].transform.Find("Marker").gameObject.SetActive(false);
         currentSpirit++;
 
         if(currentSpirit >= _spirits.Count)
         {
             currentSpirit = 0;
         }
-
+        _spirits[currentSpirit].transform.Find("Marker").gameObject.SetActive(true);
         _cameraFollow.Player = _spirits[currentSpirit].gameObject;
 
     }
