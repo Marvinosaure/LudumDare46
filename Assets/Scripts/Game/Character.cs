@@ -77,8 +77,6 @@ public class Character : MonoBehaviour
 
         _controls.Gameplay.Aim.performed += HandleAim;
         _controls.Gameplay.Aim.canceled += context => { _isAim = false; if (bulletTime != null) bulletTime.Active = false; };
-
-        _controls.Gameplay.Direction.performed += HandleDirection;
     }
 
     IEnumerator Start()
@@ -95,7 +93,7 @@ public class Character : MonoBehaviour
             _exitPoints.transform.Find("left-arrow").gameObject.SetActive(false);
             _exitPoints.transform.Find("right-arrow").gameObject.SetActive(false);
         }
-        else if (_type == Spirit.Type.Large)
+        else if (_type == Spirit.Type.small)
         {
             _exitPoints.transform.Find("down-arrow").gameObject.SetActive(false);
             _exitPoints.transform.Find("left-arrow").gameObject.SetActive(false);
@@ -116,8 +114,11 @@ public class Character : MonoBehaviour
 
     private void HandleMove(InputAction.CallbackContext context)
     {
-        if (_isAim) return;
-        _moveAxis = context.ReadValue<Vector2>();
+        if (_type == Spirit.Type.medium)
+            _direction = context.ReadValue<Vector2>() * _throwForce;
+
+        if (!_isAim)
+            _moveAxis = context.ReadValue<Vector2>();
     }
 
     private void HandleJump(InputAction.CallbackContext context)
@@ -147,31 +148,6 @@ public class Character : MonoBehaviour
             _exitPoints.SetActive(true);
         }
         
-    }
-
-    private void HandleDirection(InputAction.CallbackContext context)
-    {
-        if(_isAim && _type == Spirit.Type.medium)
-        {
-            switch(context.control.name)
-            {
-                case "upArrow":
-                    _direction = Vector2.up * _throwForce;
-                    break;
-                case "leftArrow":
-                    _direction = Vector2.left * _throwForce;
-                    break;
-                case "rightArrow":
-                    _direction = Vector2.right * _throwForce;
-                    break;
-                case "downArrow":
-                    _direction = Vector2.down * _throwForce;
-                    break;
-                default:
-                    _direction = Vector2.up * _throwForce;
-                    break;
-            }
-        }
     }
 
     private void MoveCharacter()
