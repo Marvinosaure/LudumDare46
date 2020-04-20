@@ -47,6 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionCarry: {fileID: 1179378088873235217}
   angleCarry: 0
+  autoReleaseTest: 0
+  particlesEffect: {fileID: 2788674418140974906, guid: 1a735e41c3b4d2441b4d3d3688d945bf,
+    type: 3}
 --- !u!70 &4944078269830123524
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

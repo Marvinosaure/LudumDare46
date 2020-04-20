@@ -7,6 +7,7 @@ public class BabyCatcher : MonoBehaviour
     [SerializeField] Transform positionCarry;
     [SerializeField] float angleCarry;
     [SerializeField] bool autoReleaseTest;
+    [SerializeField] GameObject particlesEffect;
 
     public bool isCarrying { get; set; }
 
@@ -35,6 +36,9 @@ public class BabyCatcher : MonoBehaviour
             if(autoReleaseTest) StartCoroutine(AutoRelease());
 
             transform.parent.GetComponent<Animator>().SetBool("Baby", true);
+
+            // Particle system
+            StartCoroutine(CreateParticleSystem());
         }
     }
 
@@ -62,5 +66,13 @@ public class BabyCatcher : MonoBehaviour
         yield return new WaitForSeconds(2);
 
         Release(new Vector2(0, 5));
+    }
+
+    IEnumerator CreateParticleSystem()
+    {
+        GameObject part = Instantiate(particlesEffect, this.transform.position, this.transform.rotation);
+        part.transform.parent = this.transform;
+        yield return new WaitForSeconds(1);
+        Destroy(part);
     }
 }
