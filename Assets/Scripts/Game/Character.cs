@@ -59,7 +59,7 @@ public class Character : MonoBehaviour
         switch (_type)
         {
             case Spirit.Type.small:
-                _direction = Vector2.right * _throwForce;
+                _direction = Vector2.down * _throwForce;
                 break;
 
             case Spirit.Type.Large:
@@ -97,7 +97,7 @@ public class Character : MonoBehaviour
         }
         else if (_type == Spirit.Type.small)
         {
-            _exitPoints.transform.Find("down-arrow").gameObject.SetActive(false);
+            _exitPoints.transform.Find("right-arrow").gameObject.SetActive(false);
             _exitPoints.transform.Find("left-arrow").gameObject.SetActive(false);
             _exitPoints.transform.Find("up-arrow").gameObject.SetActive(false);
         }
