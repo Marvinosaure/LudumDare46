@@ -276,7 +276,7 @@ MonoBehaviour:
   buttonPrefab: {fileID: 887651820172513795, guid: 68063cfb01a064330b7949fbd7659783,
     type: 3}
   levelGrid: {fileID: 539315069}
-  levelCount: 5
+  levelCount: 9
 --- !u!114 &539315072
 MonoBehaviour:
   m_ObjectHideFlags: 0
