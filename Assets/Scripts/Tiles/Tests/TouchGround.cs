@@ -82,7 +82,14 @@ public class TouchGround : MonoBehaviour
         Debug.Log($"BABY TRIGGER {collision.tag} {collision.name}");
         if (collision.tag == "cradle" && !IsGameOver)
         {
-            if(gameObject.transform.parent != null) gameObject.transform.parent.parent.GetComponentInChildren<BabyCatcher>().Release(Vector2.zero);
+            collision.gameObject.GetComponent<Cradle>().SetBaby(true);
+            
+
+            if (gameObject.transform.parent != null)
+            {
+                gameObject.transform.parent.parent.GetComponentInChildren<BabyCatcher>().Release(Vector2.zero);
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            }
 
             Carry();
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
