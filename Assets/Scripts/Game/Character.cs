@@ -149,7 +149,7 @@ public class Character : MonoBehaviour
         }
         else
         {
-            _direction = Vector2.up * _throwForce;
+            if(_direction.magnitude < 0.5f) _direction = Vector2.up * _throwForce;
             _exitPoints.SetActive(true);
         }
         
