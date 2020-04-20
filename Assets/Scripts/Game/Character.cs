@@ -175,6 +175,7 @@ public class Character : MonoBehaviour
     {
         Debug.Log("handle change");
         GameManager.instance.ChangeSpirit();
+        SoundsManager.instance.ChangeCharacterPlay();
     }
 
     private void HandleAim(InputAction.CallbackContext context)
@@ -186,6 +187,7 @@ public class Character : MonoBehaviour
         {
             _exitPoints.SetActive(false);          
             _babyCatcher.Release(_direction);
+            SoundsManager.instance.BabyShootPlay();
         }
         else
         {

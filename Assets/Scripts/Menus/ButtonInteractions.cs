@@ -35,7 +35,7 @@ public class ButtonInteractions : MonoBehaviour
     private void HandleValidate(InputAction.CallbackContext obj)
     {
         if (_focused)
-        {
+        {            
             _button.onClick.Invoke();
         }
     }

@@ -18,6 +18,7 @@ public class BabyCatcher : MonoBehaviour
         Debug.Log($"BABY CATCHER ENTER {collision.gameObject} {collision.tag}");
         if(collision.tag == "baby")
         {
+            SoundsManager.instance.FeePlay();
             var tg = collision.gameObject.GetComponent<TouchGround>();
             if (tg.IsGameOver || tg.IsCarried) return;
 

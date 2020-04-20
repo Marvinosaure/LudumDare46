@@ -17,6 +17,7 @@ public class LevelSelectionButton : MonoBehaviour
             {
                 Persistent.CurrentLevel = level;
                 SceneManager.LoadScene("Level" + Level);
+                SoundsManager.instance.AmbientPlay();
             });
             transform.Find("Text").GetComponent<Text>().text = value.ToString();
         }

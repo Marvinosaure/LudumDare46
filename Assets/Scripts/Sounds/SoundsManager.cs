@@ -13,6 +13,8 @@ public class SoundsManager : MonoBehaviour
     private AudioSource _changeCharacter;
     private AudioSource _babyScratch;
     private AudioSource _babyShoot;
+    private AudioSource _menu;
+    private AudioSource _ambient;
 
     private void Awake()
     {
@@ -27,6 +29,8 @@ public class SoundsManager : MonoBehaviour
         _changeCharacter = _soundComponent.Find("ChangeCharacter").GetComponent<AudioSource>();
         _babyScratch = _soundComponent.Find("BabyScratch").GetComponent<AudioSource>();
         _babyShoot = _soundComponent.Find("BabyShoot").GetComponent<AudioSource>();
+        _menu = _soundComponent.Find("Menu").GetComponent<AudioSource>();
+        _ambient = _soundComponent.Find("Ambient").GetComponent<AudioSource>();
 
     }
 
@@ -41,6 +45,12 @@ public class SoundsManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    public void AmbientPlay()
+    {
+        _menu.Stop();
+        _ambient.Play();
     }
 
     public void JumpPlay()

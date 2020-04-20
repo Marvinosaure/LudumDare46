@@ -43,6 +43,7 @@ public class TouchGround : MonoBehaviour
 
         if (other.tag=="ground" && !IsGameOver)
         {
+            SoundsManager.instance.BabyScratchPlay();
             IsGameOver = true;
             StartCoroutine(Failure());
             // anim.SetBool("dead",true);
