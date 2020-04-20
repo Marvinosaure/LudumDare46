@@ -17,6 +17,12 @@ public class SpiritData : MonoBehaviour
     private void Update()
     {
         _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _collisionLayers);
+
+        if(gameObject.GetComponent<Character>() == null && _isGrounded)
+        {
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            gameObject.GetComponent<Animator>().SetBool("InAir", !_isGrounded);
+        }
     }
 
     private void OnDrawGizmos()
