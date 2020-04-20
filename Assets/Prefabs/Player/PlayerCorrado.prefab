@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4887475021457009679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2057131260701201531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aa27c53142739e4c97feacd30784f94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spirit: {fileID: 11400000, guid: 295dbde0d01584849b76018736c1e4f7, type: 2}
 --- !u!1 &3223842128346267381
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,6 +277,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4450266083264185976
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057131260701201531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: f2a7fd30937a02f4d9d632fe27fce7a7, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0048888326, y: -0.21022677}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.2666496, y: 1.5795465}
+  m_EdgeRadius: 0
+--- !u!114 &-4887475021457009679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057131260701201531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa27c53142739e4c97feacd30784f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spirit: {fileID: 11400000, guid: 295dbde0d01584849b76018736c1e4f7, type: 2}
 --- !u!1 &8738678620767160746
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,20 +500,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
       propertyPath: m_Offset.y
-      value: -0.26
+      value: -0.24292672
       objectReference: {fileID: 0}
     - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
       propertyPath: m_Size.y
-      value: 1.49
+      value: 1.4558535
       objectReference: {fileID: 0}
     - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
       propertyPath: m_Offset.x
-      value: 0
+      value: 0.09390277
       objectReference: {fileID: 0}
     - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
       propertyPath: m_Size.x
-      value: 1.17
+      value: 0.9821943
       objectReference: {fileID: 0}
+    - target: {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f2a7fd30937a02f4d9d632fe27fce7a7, type: 2}
     - target: {fileID: 3894242973228983189, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_Controller
@@ -498,6 +528,11 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7762192452084276534, guid: 0f3a2761b80d73144894a98078de6c61,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f2a7fd30937a02f4d9d632fe27fce7a7, type: 2}
     - target: {fileID: 7762192452084276538, guid: 0f3a2761b80d73144894a98078de6c61,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -576,6 +611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7762192452084276539, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
+    - {fileID: 1991968003, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0f3a2761b80d73144894a98078de6c61, type: 3}
 --- !u!1 &2057131260701201531 stripped
 GameObject:
