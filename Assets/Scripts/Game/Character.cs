@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
     public Vector2 Direction
     {
         get { return _direction; }
-        set { _direction = value; }
+        set { _direction = value; SetArrow();  }
     }
 
     private Rigidbody2D _rb;
@@ -36,6 +36,10 @@ public class Character : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private BabyCatcher _babyCatcher;
     private GameObject _exitPoints;
+    private SpriteRenderer _exitN;
+    private SpriteRenderer _exitS;
+    private SpriteRenderer _exitW;
+    private SpriteRenderer _exitE;
     private Spirit.Type _type;
     private Vector3 _velocity = Vector3.zero;
     private PlayerControls _controls;
@@ -60,10 +64,12 @@ public class Character : MonoBehaviour
         {
             case Spirit.Type.small:
                 _direction = Vector2.down * _throwForce;
+                SetArrow();
                 break;
 
             case Spirit.Type.Large:
                 _direction = Vector2.up * _throwForce;
+                SetArrow();
                 break;
             default:
                 break;
@@ -81,6 +87,19 @@ public class Character : MonoBehaviour
         _controls.Gameplay.Aim.canceled += context => { _isAim = false; if (bulletTime != null) bulletTime.Active = false; };
     }
 
+    public void SetArrow()
+    {
+        _exitE.color = new Color(0, 0, 0);
+        _exitS.color = new Color(0, 0, 0);
+        _exitW.color = new Color(0, 0, 0);
+        _exitN.color = new Color(0, 0, 0);
+
+        if (_direction.x > 0.5f) _exitE.color = new Color(1, 1, 1, 1);
+        if (_direction.x < -0.5f) _exitW.color = new Color(1, 1, 1, 1);
+        if (_direction.y > 0.5f) _exitN.color = new Color(1, 1, 1, 1);
+        if (_direction.y < -0.5f) _exitS.color = new Color(1, 1, 1, 1);
+    }
+
     IEnumerator Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -88,6 +107,10 @@ public class Character : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _babyCatcher = gameObject.transform.Find("BabyCatcher").GetComponent<BabyCatcher>();
         _exitPoints = gameObject.transform.Find("ExitPoints").gameObject;
+        _exitN = _exitPoints.transform.Find("up-arrow").gameObject.GetComponent<SpriteRenderer>();
+        _exitS = _exitPoints.transform.Find("down-arrow").gameObject.GetComponent<SpriteRenderer>();
+        _exitW = _exitPoints.transform.Find("left-arrow").gameObject.GetComponent<SpriteRenderer>();
+        _exitE = _exitPoints.transform.Find("right-arrow").gameObject.GetComponent<SpriteRenderer>();
 
         if (_type == Spirit.Type.Large)
         {
@@ -120,7 +143,11 @@ public class Character : MonoBehaviour
     private void HandleMove(InputAction.CallbackContext context)
     {
         if (_type == Spirit.Type.medium)
+        {
             _direction = context.ReadValue<Vector2>() * _throwForce;
+            SetArrow();
+        }
+
 
         if (!_isAim)
             _moveAxis = context.ReadValue<Vector2>();
@@ -140,7 +167,7 @@ public class Character : MonoBehaviour
     private void HandleAim(InputAction.CallbackContext context)
     {
         _isAim = context.control.IsPressed();
-        if (bulletTime != null) bulletTime.Active = true;
+        if (bulletTime != null && _babyCatcher.isCarrying) bulletTime.Active = true;
 
         if (!_isAim && _babyCatcher.isCarrying)
         {
@@ -149,8 +176,12 @@ public class Character : MonoBehaviour
         }
         else
         {
-            if(_direction.magnitude < 0.5f) _direction = Vector2.up * _throwForce;
-            _exitPoints.SetActive(true);
+            if (_direction.magnitude < 0.5f)
+            {
+                _direction = Vector2.up * _throwForce;
+                SetArrow();
+            }
+            if (_babyCatcher.isCarrying) _exitPoints.SetActive(true);
         }
         
     }
