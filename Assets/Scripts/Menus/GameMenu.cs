@@ -42,7 +42,7 @@ public class GameMenu : MonoBehaviour
     private void QuitKey(InputAction.CallbackContext context)
     {
         Debug.Log("Continue key");
-        Pause(false);
+        SceneManager.LoadScene("LevelSelection");
     }
 
     public void Pause(bool doPause)
