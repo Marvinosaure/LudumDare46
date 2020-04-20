@@ -89,6 +89,7 @@ public class Character : MonoBehaviour
 
     public void SetArrow()
     {
+        if (_exitE == null) return;
         _exitE.color = new Color(0, 0, 0);
         _exitS.color = new Color(0, 0, 0);
         _exitW.color = new Color(0, 0, 0);
@@ -107,12 +108,14 @@ public class Character : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _babyCatcher = gameObject.transform.Find("BabyCatcher").GetComponent<BabyCatcher>();
         _exitPoints = gameObject.transform.Find("ExitPoints").gameObject;
+
         _exitN = _exitPoints.transform.Find("up-arrow").gameObject.GetComponent<SpriteRenderer>();
         _exitS = _exitPoints.transform.Find("down-arrow").gameObject.GetComponent<SpriteRenderer>();
         _exitW = _exitPoints.transform.Find("left-arrow").gameObject.GetComponent<SpriteRenderer>();
         _exitE = _exitPoints.transform.Find("right-arrow").gameObject.GetComponent<SpriteRenderer>();
 
-        if (_type == Spirit.Type.Large)
+        Debug.Log($"EXIT POINTS {_exitN} {_exitS}");
+;        if (_type == Spirit.Type.Large)
         {
             _exitPoints.transform.Find("down-arrow").gameObject.SetActive(false);
             _exitPoints.transform.Find("left-arrow").gameObject.SetActive(false);
