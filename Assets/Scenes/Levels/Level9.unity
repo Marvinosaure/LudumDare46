@@ -38761,6 +38761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebeb16c2e555ed745b4cea17a696b43d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  victory: {fileID: 2805113889802311242, guid: eaf6ff4140b8149f58364205346cf001, type: 3}
 --- !u!1 &1821345795
 GameObject:
   m_ObjectHideFlags: 0
@@ -39549,6 +39550,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8616316218042181961, guid: 8b3b12c4c5ec94cbba50c15547ee1e3b,
+        type: 3}
+      propertyPath: victory
+      value: 
+      objectReference: {fileID: 4833619508629637083, guid: 248b3f90bb27b4a04bdbe986ab278d79,
+        type: 3}
     - target: {fileID: 8616316218042181962, guid: 8b3b12c4c5ec94cbba50c15547ee1e3b,
         type: 3}
       propertyPath: m_GravityScale

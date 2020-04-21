@@ -124,8 +124,8 @@ public class Character : MonoBehaviour
         _exitW = _exitPoints.transform.Find("left-arrow").gameObject.GetComponent<SpriteRenderer>();
         _exitE = _exitPoints.transform.Find("right-arrow").gameObject.GetComponent<SpriteRenderer>();
 
-        Debug.Log($"EXIT POINTS {_exitN} {_exitS}");
-;        if (_type == Spirit.Type.Large)
+        // Debug.Log($"EXIT POINTS {_exitN} {_exitS}");
+        if (_type == Spirit.Type.Large)
         {
             _exitPoints.transform.Find("down-arrow").gameObject.SetActive(false);
             _exitPoints.transform.Find("left-arrow").gameObject.SetActive(false);
@@ -173,7 +173,7 @@ public class Character : MonoBehaviour
 
     private void HandleChange(InputAction.CallbackContext context)
     {
-        Debug.Log("handle change");
+        // Debug.Log("handle change");
         GameManager.instance.ChangeSpirit();
         SoundsManager.instance.ChangeCharacterPlay();
     }

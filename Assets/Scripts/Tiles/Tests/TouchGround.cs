@@ -81,7 +81,7 @@ public class TouchGround : MonoBehaviour
             }
 
 
-            Debug.Log($"XP {angle} {Mathf.Rad2Deg * angle} {explosionAngle} {v}");
+            // Debug.Log($"XP {angle} {Mathf.Rad2Deg * angle} {explosionAngle} {v}");
             Instantiate(Mort, bebe, Quaternion.Euler(0, 0, explosionAngle));
         }
 
@@ -107,7 +107,7 @@ public class TouchGround : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"BABY TRIGGER {collision.tag} {collision.name}");
+        // Debug.Log($"BABY TRIGGER {collision.tag} {collision.name}");
         if (collision.tag == "cradle" && !IsGameOver)
         {
             collision.gameObject.GetComponent<Cradle>().SetBaby(true);
@@ -149,6 +149,9 @@ public class TouchGround : MonoBehaviour
         Instantiate(victory);
         yield return new WaitForSeconds(2);
         Persistent.CurrentLevel += 1;
-        SceneManager.LoadScene("Level" + Persistent.CurrentLevel);
+        if(Persistent.CurrentLevel <= 10)
+            SceneManager.LoadScene("Level" + Persistent.CurrentLevel);
+        else
+            SceneManager.LoadScene("LevelSelection");
     }
 }

@@ -15,7 +15,7 @@ public class BabyCatcher : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"BABY CATCHER ENTER {collision.gameObject} {collision.tag}");
+        // Debug.Log($"BABY CATCHER ENTER {collision.gameObject} {collision.tag}");
         if(collision.tag == "baby")
         {
             SoundsManager.instance.FeePlay();
@@ -45,7 +45,7 @@ public class BabyCatcher : MonoBehaviour
 
     public void Release(Vector2 velocity)
     {
-        Debug.Log($"{transform.parent.name} Release");
+        // Debug.Log($"{transform.parent.name} Release");
         if (baby == null) { Debug.LogWarning("Already Released"); return;  }
         baby.transform.SetParent(null);
         baby.GetComponent<SpriteRenderer>().enabled = true;
