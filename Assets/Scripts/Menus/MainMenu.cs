@@ -15,5 +15,6 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene("Level1");
+        SoundsManager.instance.AmbientPlay();
     }
 }
