@@ -49,12 +49,40 @@ public class TouchGround : MonoBehaviour
             // anim.SetBool("dead",true);
             float x = transform.position.x;
             float y = transform.position.y;
-            float z = 0;
-            Vector2 bebe;
-            bebe.x = x;
-            bebe.y = Mathf.Ceil(y + 0.5f);
 
-            Instantiate(Mort, bebe, Quaternion.identity);
+            Vector2 bebe;
+
+            var cp = collision.GetContact(0).point;
+            var v = new Vector2(x - cp.x, y - cp.y);
+            var angle = Mathf.Atan2(v.y, v.x);
+            var explosionAngle = 0;
+            bebe.y = Mathf.Ceil(y + 0.5f);
+            bebe.x = x;
+
+            if (Mathf.Rad2Deg * angle >= -45 && Mathf.Rad2Deg * angle < 45)
+            {
+                explosionAngle = -90;
+                bebe.y = y;
+                bebe.x = Mathf.Ceil(x + 0.5f);
+            }
+
+            if (Mathf.Rad2Deg * angle < -135 || Mathf.Rad2Deg * angle > 135)
+            {
+                explosionAngle = 90;
+                bebe.y = y;
+                bebe.x = Mathf.Floor(x - 0.5f);
+            }
+
+            if (Mathf.Rad2Deg * angle < -45 && Mathf.Rad2Deg * angle >= -135)
+            {
+                explosionAngle = 180;
+                bebe.y = Mathf.Floor(y - 0.5f);
+                bebe.x = x;
+            }
+
+
+            Debug.Log($"XP {angle} {Mathf.Rad2Deg * angle} {explosionAngle} {v}");
+            Instantiate(Mort, bebe, Quaternion.Euler(0, 0, explosionAngle));
         }
 
         if (other.tag=="spirit")
