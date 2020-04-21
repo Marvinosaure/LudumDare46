@@ -8,12 +8,12 @@ public class Final : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        other.gameObject.transform.parent.GetComponent<SpriteRenderer>().enabled = false;
-        Destroy(other.gameObject.transform.parent.GetComponent<Character>());
 
         //gameObject.GetComponent<Animator>().SetBool("Final", true);
         gameObject.transform.Find("WithBaby").GetComponent<Animator>().SetBool("Final", true);
 
+        other.gameObject.transform.parent.GetComponent<SpriteRenderer>().enabled = false;
+        Destroy(other.gameObject.transform.parent.GetComponent<Character>());
         StartCoroutine(Victory());
     }
 
