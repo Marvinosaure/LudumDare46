@@ -6,6 +6,20 @@ using UnityEngine;
 public class SoundsManager : MonoBehaviour
 {
     public static SoundsManager instance;
+    public static SoundsManager Instance
+    {
+        get
+        {
+            if(instance == null)
+            {
+                var go = new GameObject("SoundsManager");
+                go.AddComponent<SoundsManager>();
+                instance = go.GetComponent<SoundsManager>(); ;
+                DontDestroyOnLoad(go);
+            }
+            return instance;
+        }
+    }
 
     private Transform _soundComponent;
     private AudioSource _jump;
@@ -24,13 +38,13 @@ public class SoundsManager : MonoBehaviour
     private void Start()
     {
         _soundComponent = gameObject.transform;
-        _jump = _soundComponent.Find("Jump").GetComponent<AudioSource>();
-        _fee = _soundComponent.Find("Fee").GetComponent<AudioSource>();
-        _changeCharacter = _soundComponent.Find("ChangeCharacter").GetComponent<AudioSource>();
-        _babyScratch = _soundComponent.Find("BabyScratch").GetComponent<AudioSource>();
-        _babyShoot = _soundComponent.Find("BabyShoot").GetComponent<AudioSource>();
-        _menu = _soundComponent.Find("Menu").GetComponent<AudioSource>();
-        _ambient = _soundComponent.Find("Ambient").GetComponent<AudioSource>();
+        _jump = _soundComponent.Find("Jump")?.GetComponent<AudioSource>();
+        _fee = _soundComponent.Find("Fee")?.GetComponent<AudioSource>();
+        _changeCharacter = _soundComponent.Find("ChangeCharacter")?.GetComponent<AudioSource>();
+        _babyScratch = _soundComponent.Find("BabyScratch")?.GetComponent<AudioSource>();
+        _babyShoot = _soundComponent.Find("BabyShoot")?.GetComponent<AudioSource>();
+        _menu = _soundComponent.Find("Menu")?.GetComponent<AudioSource>();
+        _ambient = _soundComponent.Find("Ambient")?.GetComponent<AudioSource>();
 
     }
 
@@ -50,32 +64,32 @@ public class SoundsManager : MonoBehaviour
     public void AmbientPlay()
     {
         _menu.Stop();
-        _ambient.Play();
+        _ambient?.Play();
     }
 
     public void JumpPlay()
     {
-        _jump.Play();
+        _jump?.Play();
     }
 
     public void FeePlay()
     {
-        _fee.Play();
+        _fee?.Play();
     }
 
     public void ChangeCharacterPlay()
     {
-        _changeCharacter.Play();
+        _changeCharacter?.Play();
     }
 
 
     public void BabyScratchPlay()
     {
-        _babyScratch.Play();
+        _babyScratch?.Play();
     }
 
     public void BabyShootPlay()
     {
-        _babyShoot.Play();
+        _babyShoot?.Play();
     }
 }

@@ -219,9 +219,11 @@ public class Character : MonoBehaviour
         if (!_isJumping || !_spiritData._isGrounded || _babyCatcher.isCarrying) return;
 
         _animator.SetTrigger("Jump");
-        SoundsManager.instance.JumpPlay();
+        SoundsManager.Instance.JumpPlay();
 
+        _rb.velocity = new Vector2(_rb.velocity.x, 0);
         _rb.AddForce(new Vector2(0f, _jumpForce));
+        
         _isJumping = false;
     }
 

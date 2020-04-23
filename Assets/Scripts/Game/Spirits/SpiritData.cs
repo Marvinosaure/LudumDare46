@@ -12,6 +12,7 @@ public class SpiritData : MonoBehaviour
 
     [SerializeField]
     private Transform _groundCheck;
+
     public bool _isGrounded;
 
     private void Update()
