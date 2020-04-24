@@ -63,7 +63,7 @@ public class SoundsManager : MonoBehaviour
 
     public void AmbientPlay()
     {
-        _menu.Stop();
+        _menu?.Stop();
         _ambient?.Play();
     }
 
