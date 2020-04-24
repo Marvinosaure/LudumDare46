@@ -23,6 +23,7 @@ public class SpiritData : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             gameObject.GetComponent<Animator>().SetBool("InAir", !_isGrounded);
+            gameObject.GetComponent<Animator>().SetFloat("Speed", 0);
         }
     }
 
